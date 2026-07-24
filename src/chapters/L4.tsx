@@ -7,6 +7,21 @@ export default function L4() {
   return (
     <ChapterLayout title="Internal & External Validity" subtitle="Lecture 4 — Can you trust your results, and do they generalize?">
 
+      <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
+        <h2 className="text-blue-900">Learning Objectives</h2>
+        <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
+        <ul className="list-disc pl-6 space-y-1 text-blue-800">
+          <li>Distinguish between internal and external validity and explain why internal validity is a prerequisite</li>
+          <li>Perform and interpret a Sample Ratio Mismatch (SRM) check using the chi-square test</li>
+          <li>Identify common causes of SRM and explain how to prevent them</li>
+          <li>Design and interpret A/A tests for platform validation and sample size estimation</li>
+          <li>Explain SUTVA violations and when cluster-level randomization is needed</li>
+          <li>Recognize survivorship bias and apply Intention-to-Treat analysis</li>
+          <li>Estimate heterogeneous treatment effects (HTE) and test for interaction effects using regression</li>
+          <li>Detect novelty and primacy effects and adjust experiment duration accordingly</li>
+        </ul>
+      </section>
+
       {/* =========================================================
           1. Internal vs External Validity
           ========================================================= */}

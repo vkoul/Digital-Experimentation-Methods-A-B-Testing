@@ -5,6 +5,21 @@ import { MathBlock } from '../components/content/MathBlock'
 export default function L1() {
   return (
     <ChapterLayout title="A/B Testing Overview" subtitle="Lecture 1 — Why experiment?">
+
+      <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
+        <h2 className="text-blue-900">Learning Objectives</h2>
+        <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
+        <ul className="list-disc pl-6 space-y-1 text-blue-800">
+          <li>Define A/B testing and distinguish it from observational studies</li>
+          <li>Explain why randomization establishes causality while correlation does not</li>
+          <li>Identify the key components of an experiment: OEC, parameters, conditions, and randomization unit</li>
+          <li>Recognize the HiPPO problem and articulate the value of data-driven decision making</li>
+          <li>Design an end-to-end A/B test including hypothesis, metrics, randomization, and launch decision</li>
+          <li>Describe when experiments cannot or should not be run</li>
+          <li>Explain organizational tenets for building an experimentation culture</li>
+        </ul>
+      </section>
+
       {/* ───────────────────────────────────────────── */}
       <section>
         <h2>What is A/B Testing?</h2>

@@ -6,6 +6,20 @@ export default function L7() {
   return (
     <ChapterLayout title="Observational Causal Studies" subtitle="Lecture 7 — When randomization isn't possible">
 
+      <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
+        <h2 className="text-blue-900">Learning Objectives</h2>
+        <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
+        <ul className="list-disc pl-6 space-y-1 text-blue-800">
+          <li>Explain when and why randomized experiments are not feasible</li>
+          <li>Decompose observed differences into treatment effects and selection bias</li>
+          <li>Design an Interrupted Time Series (ITS) study and identify its confounders</li>
+          <li>Apply Regression Discontinuity Design (RDD) given a sharp threshold and verify its assumptions</li>
+          <li>Set up a Difference-in-Differences (DiD) analysis with the parallel trends assumption</li>
+          <li>Construct comparable groups using Propensity Score Matching (PSM) and explain its limitations</li>
+          <li>Combine methods (e.g., PSM + DiD) to strengthen causal claims from observational data</li>
+        </ul>
+      </section>
+
       {/* ================================================================
           SECTION 1: Hierarchy of Evidence
           ================================================================ */}

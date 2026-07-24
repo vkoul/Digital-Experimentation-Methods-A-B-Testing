@@ -7,6 +7,20 @@ export default function L2() {
   return (
     <ChapterLayout title="Statistics Critical to Experimentation I" subtitle="Lecture 2 — The statistical engine behind A/B tests">
 
+      <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
+        <h2 className="text-blue-900">Learning Objectives</h2>
+        <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
+        <ul className="list-disc pl-6 space-y-1 text-blue-800">
+          <li>Distinguish between population and sample, and explain statistical inference as the bridge between them</li>
+          <li>Apply the potential outcomes framework to define average treatment effects</li>
+          <li>Conduct a t-test and z-test, and interpret the resulting test statistic and p-value</li>
+          <li>Derive and compute the standard error of a treatment effect estimate</li>
+          <li>Correctly interpret p-values and identify common misinterpretations</li>
+          <li>Explain Type I error and its relationship to the significance level α</li>
+          <li>Recognize the multiple testing problem and apply tiered significance levels</li>
+        </ul>
+      </section>
+
       {/* ===== 1. Population vs Sample ===== */}
       <section>
         <h2>Population vs Sample</h2>

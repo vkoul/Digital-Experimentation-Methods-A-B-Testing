@@ -7,6 +7,21 @@ import { SampleSizeCalculator } from '../components/widgets/SampleSizeCalculator
 export default function L3() {
   return (
     <ChapterLayout title="Statistics Critical to Experimentation II" subtitle="Lecture 3 — Confidence intervals, power, and sample size planning">
+
+      <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
+        <h2 className="text-blue-900">Learning Objectives</h2>
+        <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
+        <ul className="list-disc pl-6 space-y-1 text-blue-800">
+          <li>Construct and correctly interpret confidence intervals for treatment effects</li>
+          <li>Explain the duality between confidence intervals and hypothesis tests</li>
+          <li>Define Type II error and statistical power, and explain what influences them</li>
+          <li>Calculate required sample size using the formula n = 16σ²/δ²</li>
+          <li>Apply the launch decision framework using CIs relative to practical significance</li>
+          <li>Identify when bootstrap CIs are needed and describe the procedure</li>
+          <li>Use Fisher's meta-analysis to combine evidence from multiple underpowered experiments</li>
+        </ul>
+      </section>
+
       {/* ===== SECTION 1: CONFIDENCE INTERVALS ===== */}
       <section>
         <h2>Confidence Intervals</h2>

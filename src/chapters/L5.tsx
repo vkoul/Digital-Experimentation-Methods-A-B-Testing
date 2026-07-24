@@ -6,6 +6,20 @@ export default function L5() {
   return (
     <ChapterLayout title="Improving Sensitivity I" subtitle="Lecture 5 — Getting more signal from your data">
 
+      <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
+        <h2 className="text-blue-900">Learning Objectives</h2>
+        <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
+        <ul className="list-disc pl-6 space-y-1 text-blue-800">
+          <li>Explain how variance flows through the chain of key statistics (SE → t → p → CI → power → sample size)</li>
+          <li>Apply the delta method to compute standard errors for ratio metrics</li>
+          <li>Recognize when clustered standard errors are needed and explain their effect on inference</li>
+          <li>Apply the three-strategy framework for improving sensitivity: reduce variance, increase N, increase effect size</li>
+          <li>Design interleaving experiments for ranking algorithms and explain why they are more sensitive</li>
+          <li>Define trigger conditions for triggered experiments and calculate the sample size reduction</li>
+          <li>Distinguish between triggered and overall treatment effects and compute dilution</li>
+        </ul>
+      </section>
+
       {/* ============================================================
           1. Variance and Key Statistics
           ============================================================ */}

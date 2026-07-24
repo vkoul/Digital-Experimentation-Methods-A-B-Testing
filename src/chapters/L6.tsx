@@ -6,6 +6,21 @@ import { CUPEDVarianceReducer } from '../components/widgets/CUPEDVarianceReducer
 export default function L6() {
   return (
     <ChapterLayout title="Improving Sensitivity II" subtitle="Lecture 6 — Variance Reduction">
+
+      <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
+        <h2 className="text-blue-900">Learning Objectives</h2>
+        <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
+        <ul className="list-disc pl-6 space-y-1 text-blue-800">
+          <li>Explain stratification (block design) and how it removes between-strata variance</li>
+          <li>Execute the 5-step stratification procedure and compute the resulting variance reduction</li>
+          <li>Compare stratification, post-stratification, and CUPED in terms of implementation and effectiveness</li>
+          <li>Derive the optimal θ for CUPED and calculate expected variance reduction from correlation ρ</li>
+          <li>Apply regression with control variables to reduce residual variance in treatment effect estimation</li>
+          <li>Explain why CUPED preserves unbiased treatment effect estimates despite adjusting outcomes</li>
+          <li>Choose appropriate control variables (covariates) for variance reduction</li>
+        </ul>
+      </section>
+
       {/* ============================================================
           SECTION 1: Overview
           ============================================================ */}
