@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { ChapterLayout } from '../components/content/ChapterLayout'
 
 export default function Intro() {
@@ -126,11 +127,19 @@ export default function Intro() {
         <h2 id="course-roadmap">🗺️ Course Roadmap</h2>
         <div className="space-y-4">
           <div>
-            <h3 className="font-semibold text-gray-900 mb-2">1. A Comprehensive Overview of A/B Testing</h3>
+            <h3 className="font-semibold mb-2">
+              <Link to="/l1" className="text-blue-600 dark:text-blue-400 hover:underline">
+                1. A Comprehensive Overview of A/B Testing
+              </Link>
+            </h3>
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900 mb-2">2. Statistics Behind A/B Testing</h3>
+            <h3 className="font-semibold mb-2">
+              <Link to="/l2" className="text-blue-600 dark:text-blue-400 hover:underline">
+                2. Statistics Behind A/B Testing
+              </Link>
+            </h3>
             <ul className="list-disc pl-6 space-y-1 text-gray-700">
               <li>Statistical tests (t, z, chi-square)</li>
               <li>Confidence intervals</li>
@@ -141,7 +150,11 @@ export default function Intro() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900 mb-2">3. Internal &amp; External Validity</h3>
+            <h3 className="font-semibold mb-2">
+              <Link to="/l4" className="text-blue-600 dark:text-blue-400 hover:underline">
+                3. Internal &amp; External Validity
+              </Link>
+            </h3>
             <ul className="list-disc pl-6 space-y-1 text-gray-700">
               <li>SUTVA (network interferences)</li>
               <li>Survivorship bias</li>
@@ -151,7 +164,11 @@ export default function Intro() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900 mb-2">4. Improve Sensitivity</h3>
+            <h3 className="font-semibold mb-2">
+              <Link to="/l5" className="text-blue-600 dark:text-blue-400 hover:underline">
+                4. Improve Sensitivity
+              </Link>
+            </h3>
             <ul className="list-disc pl-6 space-y-1 text-gray-700">
               <li>Ratio metrics (e.g., lift etc.)</li>
               <li>Increase N (pooled control group, split sample)</li>
@@ -163,7 +180,11 @@ export default function Intro() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900 mb-2">5. Observational Causal Studies</h3>
+            <h3 className="font-semibold mb-2">
+              <Link to="/l7" className="text-blue-600 dark:text-blue-400 hover:underline">
+                5. Observational Causal Studies
+              </Link>
+            </h3>
             <ul className="list-disc pl-6 space-y-1 text-gray-700">
               <li>Interrupted time series (ITS)</li>
               <li>Regression discontinuity design (RDD)</li>
