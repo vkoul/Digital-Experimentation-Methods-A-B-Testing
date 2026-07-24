@@ -22,7 +22,7 @@ export function NestedTooltip({ node }: Props) {
 
   const virtualAnchor = {
     getBoundingClientRect: () => node.anchorRect,
-  }
+  } as unknown as Element
 
   const { refs, floatingStyles } = useFloating({
     placement: ('bottom-start' as Placement),

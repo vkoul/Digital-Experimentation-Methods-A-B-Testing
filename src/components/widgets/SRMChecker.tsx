@@ -1,17 +1,5 @@
 import { useState, useMemo } from 'react'
 
-function chiSquaredCdf(x: number, k: number): number {
-  if (x <= 0) return 0
-  const halfK = k / 2
-  let sum = 0
-  let term = Math.exp(-x / 2) * Math.pow(x / 2, halfK - 1) / gamma(halfK)
-  const step = 0.001
-  for (let t = step; t <= x; t += step) {
-    sum += Math.exp(-t / 2) * Math.pow(t / 2, halfK - 1) * step
-  }
-  return Math.min(sum / gamma(halfK), 1)
-}
-
 function gamma(n: number): number {
   if (n === 1) return 1
   if (n === 0.5) return Math.sqrt(Math.PI)
