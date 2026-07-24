@@ -35,9 +35,9 @@ export default function L1() {
       <section>
         <h2>Industry Examples</h2>
         <p>
-          At the time of the course, Microsoft reported that Bing ran over 10,000 A/B tests per year,
-          with a single experiment discovering a revenue opportunity worth $120M at the time.
-          Google, Netflix, and Booking.com similarly run thousands of concurrent experiments.
+          Microsoft runs thousands of concurrent experiments on Bing, with a single experiment
+          (long ad titles) discovering a revenue opportunity worth over $120M at the time.
+          Google, Netflix, and Booking.com similarly operate at massive experimentation scale.
         </p>
         <p>
           The value of experimentation compounds: even small improvements (0.1-0.5% per experiment)

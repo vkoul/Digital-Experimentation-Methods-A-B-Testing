@@ -32,7 +32,7 @@ export default function L5() {
         <p>
           For ranking algorithms, <ConceptLink conceptId="interleaving">interleaving</ConceptLink> is
           dramatically more sensitive than standard A/B. Each user sees results from both algorithms,
-          eliminating between-user noise entirely. Netflix reports 100x efficiency gains.
+          eliminating between-user noise entirely — dramatically reducing required sample sizes.
         </p>
       </section>
 

@@ -22,7 +22,8 @@ export default function L6() {
         </p>
         <MathBlock tex="\text{Var}(Y_{\text{adj}}) = \text{Var}(Y)(1 - \rho_{XY}^2)" display />
         <p>
-          At Netflix, CUPED reduces experiment duration by 30-50%, equivalent to doubling traffic.
+          With a pre-post correlation of ρ = 0.7 (common for behavioral metrics), CUPED achieves
+          ~50% variance reduction — equivalent to doubling your sample size for free.
         </p>
         <CUPEDVarianceReducer />
       </section>
@@ -35,17 +36,19 @@ export default function L6() {
           and can reduce variance if the stratification variable predicts the outcome.
         </p>
         <p>
-          Post-stratification (adjusting after randomization) gives similar benefits without
-          complicating the randomization system. Both are forms of blocking in experimental design.
+          Post-stratification (adjusting after randomization) approaches similar performance for large n
+          without complicating the randomization system, though it is theoretically slightly less
+          efficient than stratification at assignment. In practice, CUPED, stratification, and
+          post-stratification achieve comparable variance reduction.
         </p>
       </section>
 
       <section>
-        <h2>Metric Transformations</h2>
+        <h2>Choosing Better Metrics</h2>
         <p>
-          Heavy-tailed metrics (revenue, session duration) have high variance. Practical fixes:
-          winsorization (cap at the 99th percentile), log-transformation, or switching to a less
-          noisy proxy metric that correlates with the business outcome.
+          Heavy-tailed metrics (revenue, session duration) have high variance and require large
+          sample sizes. Switching to a less noisy proxy metric that correlates with the business
+          outcome can dramatically improve sensitivity.
         </p>
         <p>
           Example: "sessions per user" (count metric, low variance) may be a better OEC than

@@ -79,7 +79,7 @@ const concepts: Record<string, ConceptDefinition> = {
       <div className="space-y-2">
         <p>Power is the probability that your experiment will correctly detect a treatment effect when one truly exists.</p>
         <MathBlock tex="\text{Power} = 1 - \beta = P(\text{reject } H_0 \mid H_0 \text{ is false})" display />
-        <p>Power depends on four factors: sample size (n), population variance (σ²), effect size (δ), and significance level (α). Increasing any of the first three increases power.</p>
+        <p>Power depends on four factors: sample size (n), effect size (δ), significance level (α), and population variance (σ²). Increasing n, δ, or α increases power; increasing σ² decreases it.</p>
       </div>
     ),
     prerequisites: ['type-ii-error', 'standard-error'],
@@ -150,14 +150,14 @@ const concepts: Record<string, ConceptDefinition> = {
   'cuped': {
     id: 'cuped',
     displayName: 'CUPED',
-    shortDefinition: 'Controlled experiments Using Pre-Experiment Data — reduces variance by 30-50%.',
+    shortDefinition: 'Controlled experiments Using Pre-Experiment Data — reduces variance using pre-period covariates.',
     content: (
       <div className="space-y-2">
         <p>CUPED subtracts predictable variance using pre-experiment data. If you know a user was a heavy spender before the experiment, you can "partial out" that noise to measure the treatment's incremental effect more precisely.</p>
         <MathBlock tex="Y_{\text{cuped}} = Y - \theta X, \quad \theta = \frac{\text{Cov}(X,Y)}{\text{Var}(X)}" display />
         <p>The best covariate X is typically the same metric from the pre-experiment period. The variance reduction is:</p>
         <MathBlock tex="\text{Var}(Y_{\text{cuped}}) = \text{Var}(Y)(1 - \rho^2)" display />
-        <p>Where ρ is the correlation between X and Y. Higher correlation means greater reduction. At Netflix, CUPED reduces experiment duration by 30-50%.</p>
+        <p>Where ρ is the correlation between X and Y. Higher correlation means greater reduction — a ρ of 0.7 yields ~50% variance reduction.</p>
       </div>
     ),
     prerequisites: ['standard-error', 'statistical-power'],
@@ -278,7 +278,7 @@ const concepts: Record<string, ConceptDefinition> = {
     content: (
       <div className="space-y-2">
         <p>In interleaving (used for ranking algorithms), each user sees recommendations from BOTH algorithms mixed together. You measure which algorithm's items get more engagement.</p>
-        <p>Because the comparison is within-user, between-user variability (the biggest noise source) is completely eliminated. This requires 100x fewer observations than standard A/B tests.</p>
+        <p>Because the comparison is within-user, between-user variability (the biggest noise source) is completely eliminated. This dramatically reduces required sample sizes compared to standard between-subjects A/B tests.</p>
         <p>Balanced interleaving randomizes which algorithm goes first for each round. Team-draft interleaving randomizes which picks first per document position.</p>
       </div>
     ),
