@@ -10,7 +10,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         <main className="w-full max-w-4xl px-6 py-8">
           {children}
         </main>
-        <aside className="hidden xl:block w-56 shrink-0 py-8 pr-4">
+        <aside className="hidden lg:block w-56 shrink-0 py-8 pr-4">
           <div className="sticky top-8">
             <TableOfContents />
           </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 
 interface TocEntry {
   id: string
@@ -9,32 +10,38 @@ export function TableOfContents() {
   const [entries, setEntries] = useState<TocEntry[]>([])
   const [activeId, setActiveId] = useState<string>('')
   const observerRef = useRef<IntersectionObserver | null>(null)
+  const location = useLocation()
 
   useEffect(() => {
-    const headings = Array.from(
-      document.querySelectorAll('.prose-content h2[id]')
-    ) as HTMLHeadingElement[]
+    const timer = setTimeout(() => {
+      const headings = Array.from(
+        document.querySelectorAll('.prose-content h2[id]')
+      ) as HTMLHeadingElement[]
 
-    setEntries(headings.map(h => ({ id: h.id, text: h.textContent || '' })))
+      setEntries(headings.map(h => ({ id: h.id, text: h.textContent || '' })))
+      setActiveId('')
 
-    observerRef.current = new IntersectionObserver(
-      (intersections) => {
-        const visible = intersections
-          .filter(e => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
-        if (visible.length > 0) {
-          setActiveId(visible[0].target.id)
-        }
-      },
-      { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
-    )
+      observerRef.current?.disconnect()
+      observerRef.current = new IntersectionObserver(
+        (intersections) => {
+          const visible = intersections
+            .filter(e => e.isIntersecting)
+            .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+          if (visible.length > 0) {
+            setActiveId(visible[0].target.id)
+          }
+        },
+        { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
+      )
 
-    headings.forEach(h => observerRef.current!.observe(h))
+      headings.forEach(h => observerRef.current!.observe(h))
+    }, 100)
 
     return () => {
+      clearTimeout(timer)
       observerRef.current?.disconnect()
     }
-  }, [])
+  }, [location.pathname])
 
   if (entries.length === 0) return null
 
