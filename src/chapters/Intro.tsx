@@ -63,6 +63,7 @@ export default function Intro() {
               Shan Huang, Assistant Professor in Marketing at HKU Business School
             </p>
             <p className="text-gray-500 text-sm">Email: shanhh@hku.hk</p>
+            <p className="text-gray-500 text-sm">Website: <a href="https://www.shanhhuang.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">shanhhuang.com</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
             <p className="font-semibold text-gray-900">Course TA</p>
