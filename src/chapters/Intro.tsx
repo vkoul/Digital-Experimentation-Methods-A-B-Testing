@@ -34,6 +34,23 @@ export default function Intro() {
         </p>
       </section>
 
+      <section className="bg-yellow-50 border border-yellow-300 rounded-lg p-4">
+        <p className="font-semibold text-yellow-900 text-sm">⚠️ Note</p>
+        <p className="text-sm text-yellow-800 mt-2">
+          This interactive textbook may omit images, charts, figures, and other visual materials
+          from the original course resources. For the complete materials including all visual aids
+          and Python exercises, please refer to the original course repository:{' '}
+          <a
+            href="https://github.com/shanmit/Course---Digital-Experimentation-Methods-A-B-Testing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline font-medium text-yellow-900 hover:text-yellow-700"
+          >
+            github.com/shanmit/Course---Digital-Experimentation-Methods-A-B-Testing
+          </a>
+        </p>
+      </section>
+
       <section>
         <h2>Course Description</h2>
         <p>
