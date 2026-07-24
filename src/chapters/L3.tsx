@@ -1,6 +1,8 @@
 import { ChapterLayout } from '../components/content/ChapterLayout'
 import { ConceptLink } from '../components/tooltip/ConceptLink'
 import { MathBlock } from '../components/content/MathBlock'
+import { CIWidthDemonstrator } from '../components/widgets/CIWidthDemonstrator'
+import { SampleSizeCalculator } from '../components/widgets/SampleSizeCalculator'
 
 export default function L3() {
   return (
@@ -32,6 +34,8 @@ export default function L3() {
         </p>
       </section>
 
+      <CIWidthDemonstrator />
+
       <section>
         <h2>Sample Size Formula</h2>
         <p>
@@ -43,6 +47,7 @@ export default function L3() {
           from historical data. Doubling the minimum detectable effect (MDE) cuts required n by 4x.
         </p>
       </section>
+      <SampleSizeCalculator />
     </ChapterLayout>
   )
 }

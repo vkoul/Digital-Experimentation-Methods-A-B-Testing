@@ -1,6 +1,7 @@
 import { ChapterLayout } from '../components/content/ChapterLayout'
 import { ConceptLink } from '../components/tooltip/ConceptLink'
 import { MathBlock } from '../components/content/MathBlock'
+import { CUPEDVarianceReducer } from '../components/widgets/CUPEDVarianceReducer'
 
 export default function L6() {
   return (
@@ -23,6 +24,7 @@ export default function L6() {
         <p>
           At Netflix, CUPED reduces experiment duration by 30-50%, equivalent to doubling traffic.
         </p>
+        <CUPEDVarianceReducer />
       </section>
 
       <section>

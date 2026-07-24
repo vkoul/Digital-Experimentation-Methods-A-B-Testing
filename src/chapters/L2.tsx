@@ -1,6 +1,7 @@
 import { ChapterLayout } from '../components/content/ChapterLayout'
 import { ConceptLink } from '../components/tooltip/ConceptLink'
 import { MathBlock } from '../components/content/MathBlock'
+import { TypeITypeIITradeoff } from '../components/widgets/TypeITypeIITradeoff'
 
 export default function L2() {
   return (
@@ -30,6 +31,8 @@ export default function L2() {
           difference. A larger SE means more noise — harder to detect small effects.
         </p>
       </section>
+
+      <TypeITypeIITradeoff />
 
       <section>
         <h2>Error Types</h2>

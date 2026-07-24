@@ -1,5 +1,6 @@
 import { ChapterLayout } from '../components/content/ChapterLayout'
 import { ConceptLink } from '../components/tooltip/ConceptLink'
+import { SRMChecker } from '../components/widgets/SRMChecker'
 
 export default function L4() {
   return (
@@ -16,6 +17,8 @@ export default function L4() {
           stop and investigate the cause (redirects, bot filtering, data pipeline bugs) before proceeding.
         </p>
       </section>
+
+      <SRMChecker />
 
       <section>
         <h2>SUTVA and Interference</h2>
