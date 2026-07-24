@@ -1,0 +1,87 @@
+@media print {
+  /* Hide UI chrome */
+  aside,
+  nav,
+  .reading-progress-bar,
+  .dark-mode-toggle,
+  button:not(.no-print),
+  input,
+  select,
+  [class*="sidebar"],
+  [class*="navbar"],
+  [class*="header-nav"] {
+    display: none !important;
+  }
+
+  /* Full width for content */
+  body,
+  main,
+  article,
+  [role="main"] {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Better spacing and page breaks */
+  h1,
+  h2 {
+    page-break-after: avoid;
+  }
+
+  h1 { margin-top: 0; }
+
+  p,
+  li {
+    page-break-inside: avoid;
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* Make links visible in print */
+  a {
+    color: #0066cc;
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  /* Code blocks remain visible */
+  code,
+  pre {
+    page-break-inside: avoid;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+  }
+
+  /* Hide interactive elements */
+  .quiz-section,
+  .flash-card,
+  .decision-scenario,
+  [class*="interactive"],
+  [class*="modal"],
+  .search-modal {
+    display: none !important;
+  }
+
+  /* Print-friendly backgrounds */
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+
+  /* Preserve layout for key content */
+  .formula-card,
+  .concept-definition,
+  .case-study {
+    page-break-inside: avoid;
+    border: 1px solid #999;
+    margin: 10pt 0;
+    padding: 10pt;
+  }
+}

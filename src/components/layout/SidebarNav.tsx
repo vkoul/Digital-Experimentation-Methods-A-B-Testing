@@ -18,6 +18,7 @@ const resources = [
   { path: '/flashcards', label: 'Flashcards' },
   { path: '/case-studies', label: 'Case Studies' },
   { path: '/map', label: 'Concept Map' },
+  { path: '/progress', label: 'Your Progress' },
 ]
 
 export function SidebarNav() {

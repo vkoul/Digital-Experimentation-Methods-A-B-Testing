@@ -78,4 +78,39 @@ export const searchIndex: SearchEntry[] = [
   { title: 'Bonferroni Correction', path: '/l6#multiple-testing', type: 'concept' },
   { title: 'False Discovery Rate', path: '/l6#multiple-testing', type: 'concept' },
   { title: 'Parallel Trends', path: '/l7#difference-in-differences', type: 'concept' },
+
+  // Resource pages
+  { title: 'Glossary', path: '/glossary', type: 'chapter' },
+  { title: 'Formula Sheet', path: '/formulas', type: 'chapter' },
+  { title: 'Flashcards', path: '/flashcards', type: 'chapter' },
+  { title: 'Case Studies', path: '/case-studies', type: 'chapter' },
+  { title: 'Concept Map', path: '/map', type: 'chapter' },
+  { title: 'Your Progress', path: '/progress', type: 'chapter' },
+
+  // Key formulas (for search)
+  { title: 'Sample Mean', path: '/formulas', type: 'concept' },
+  { title: 'Standard Error', path: '/formulas', type: 'concept' },
+  { title: 'Z-Statistic', path: '/formulas', type: 'concept' },
+  { title: 'Confidence Interval 95%', path: '/formulas', type: 'concept' },
+  { title: 'Relative Lift', path: '/formulas', type: 'concept' },
+  { title: 'Bonferroni', path: '/formulas', type: 'concept' },
+  { title: 'Chi-Squared Test', path: '/formulas', type: 'concept' },
+  { title: 'Sample Size Calculation', path: '/formulas', type: 'concept' },
+  { title: 'Statistical Power', path: '/formulas', type: 'concept' },
+  { title: 'Minimum Detectable Effect', path: '/formulas', type: 'concept' },
+
+  // Case studies
+  { title: 'Knight Capital Trading Glitch', path: '/case-studies', type: 'concept' },
+  { title: 'Bing SERP Experiment', path: '/case-studies', type: 'concept' },
+  { title: 'Netflix Peeking Decision', path: '/case-studies', type: 'concept' },
+  { title: 'eBay Brand Advertising', path: '/case-studies', type: 'concept' },
+  { title: 'Uber Surge Pricing', path: '/case-studies', type: 'concept' },
+  { title: 'Facebook Emotional Contagion', path: '/case-studies', type: 'concept' },
+  { title: 'Booking Sample Ratio Mismatch', path: '/case-studies', type: 'concept' },
+  { title: 'Microsoft Office CUPED', path: '/case-studies', type: 'concept' },
+
+  // Glossary access (general)
+  { title: 'All Concepts', path: '/glossary', type: 'section' },
+  { title: 'Flashcard Review', path: '/flashcards', type: 'section' },
+  { title: 'Learning Progress Dashboard', path: '/progress', type: 'section' },
 ]
