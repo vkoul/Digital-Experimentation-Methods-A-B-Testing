@@ -1,6 +1,9 @@
 import { ChapterLayout } from '../components/content/ChapterLayout'
 import { ConceptLink } from '../components/tooltip/ConceptLink'
 import { MathBlock } from '../components/content/MathBlock'
+import { KeyTakeaways } from '../components/content/KeyTakeaways'
+import { QuizSection } from '../components/content/QuizSection'
+import { DecisionScenario } from '../components/content/DecisionScenario'
 
 export default function L1() {
   return (
@@ -715,6 +718,22 @@ export default function L1() {
         </p>
       </section>
 
+      <DecisionScenario
+        scenario="Your e-commerce site has a 'coupon code' field on the checkout page. Some stakeholders believe it distracts users who don't have coupons. The VP of Marketing insists it drives revenue. How would you resolve this disagreement?"
+        choices={[
+          { label: "Remove the coupon field based on the VP's competitor analysis", explanation: "Relying on one person's opinion (even backed by competitor analysis) is the HiPPO problem. Observational data from competitors has confounders." },
+          { label: "Run an A/B test: hide the field for 50% of users and measure revenue per user", explanation: "This is the scientific approach. Random assignment eliminates confounders, and measuring the OEC (revenue per user) directly tests the hypothesis.", isRecommended: true },
+          { label: "Analyze historical data comparing users who used coupons vs. those who didn't", explanation: "This is observational — users who seek coupons differ systematically from those who don't (selection bias). You cannot infer what would happen if you removed the field." },
+        ]}
+      />
+
+      <KeyTakeaways items={[
+        "A/B testing is the gold standard for establishing causality between product changes and user outcomes through randomization.",
+        "The HiPPO problem (Highest Paid Person's Opinion) is why organizations need data-driven experimentation over intuition.",
+        "Every experiment needs a clear hypothesis, an Overall Evaluation Criterion (OEC), proper randomization, and sufficient sample size.",
+        "Not everything can or should be experimentally tested — ethical, practical, and strategic constraints sometimes preclude experiments."
+      ]} />
+
       {/* ───────────────────────────────────────────── */}
       <section>
         <h2 id="review-questions">Review Questions</h2>
@@ -815,6 +834,8 @@ export default function L1() {
           </div>
         </div>
       </section>
+
+      <QuizSection chapterId="l1" />
     </ChapterLayout>
   )
 }

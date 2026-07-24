@@ -4,12 +4,12 @@
 
 @layer base {
   body {
-    @apply leading-relaxed;
+    @apply leading-relaxed bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors;
   }
 
-  h1 { @apply text-3xl font-bold mb-4 text-primary-900; }
-  h2 { @apply text-2xl font-semibold mb-3 mt-8 text-primary-900; }
-  h3 { @apply text-xl font-semibold mb-2 mt-6 text-gray-800; }
+  h1 { @apply text-3xl font-bold mb-4 text-primary-900 dark:text-blue-200; }
+  h2 { @apply text-2xl font-semibold mb-3 mt-8 text-primary-900 dark:text-blue-200; }
+  h3 { @apply text-xl font-semibold mb-2 mt-6 text-gray-800 dark:text-gray-200; }
 }
 
 @layer components {

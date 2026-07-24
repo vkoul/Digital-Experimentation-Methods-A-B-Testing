@@ -1,6 +1,9 @@
 import { ChapterLayout } from '../components/content/ChapterLayout'
 import { ConceptLink } from '../components/tooltip/ConceptLink'
 import { MathBlock } from '../components/content/MathBlock'
+import { KeyTakeaways } from '../components/content/KeyTakeaways'
+import { QuizSection } from '../components/content/QuizSection'
+import { DecisionScenario } from '../components/content/DecisionScenario'
 
 export default function L5() {
   return (
@@ -644,6 +647,15 @@ export default function L5() {
         </p>
       </section>
 
+      <DecisionScenario
+        scenario="Your experiment needs 4 weeks to reach significance with the current metric (revenue per user). The PM wants results in 1 week. The data team suggests using CUPED with last month's revenue as the covariate (correlation ρ = 0.7). Is this enough?"
+        choices={[
+          { label: "Yes — CUPED with ρ=0.7 reduces variance by 49%, roughly halving the required sample", explanation: "Variance reduction = 1-ρ² = 1-0.49 = 51%. This means you need about half the sample, so ~2 weeks instead of 4. Still not 1 week." },
+          { label: "CUPED helps but won't get you from 4 weeks to 1 — you need additional techniques", explanation: "Correct. ρ=0.7 gives ~51% variance reduction (need ~2 weeks). To reach 1 week, combine CUPED with triggered analysis (exclude non-exposed users) or use a more sensitive metric.", isRecommended: true },
+          { label: "No — CUPED only works with ρ > 0.9", explanation: "CUPED works at any ρ > 0. Higher ρ gives more reduction. At ρ=0.7, you get 51% variance reduction — substantial but not enough alone to cut from 4 weeks to 1." },
+        ]}
+      />
+
       {/* ============================================================
           23. Trigger Experiments Detailed
           ============================================================ */}
@@ -797,6 +809,13 @@ export default function L5() {
         </p>
       </section>
 
+      <KeyTakeaways items={[
+        "Ratio metrics (like clicks per page view) require the delta method for proper variance estimation — naive approaches underestimate uncertainty.",
+        "Clustered standard errors correct for within-unit correlation when the randomization unit differs from the analysis unit.",
+        "Interleaving designs can detect ranking preferences with orders of magnitude less data than traditional A/B tests.",
+        "The three strategies for correlated data: transform metrics, use finer randomization units, or apply triggered analysis."
+      ]} />
+
       {/* ============================================================
           Review Questions
           ============================================================ */}
@@ -900,6 +919,7 @@ export default function L5() {
           </div>
         </div>
       </section>
+      <QuizSection chapterId="l5" />
     </ChapterLayout>
   )
 }

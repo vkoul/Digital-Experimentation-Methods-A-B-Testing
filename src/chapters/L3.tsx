@@ -3,6 +3,10 @@ import { ConceptLink } from '../components/tooltip/ConceptLink'
 import { MathBlock } from '../components/content/MathBlock'
 import { CIWidthDemonstrator } from '../components/widgets/CIWidthDemonstrator'
 import { SampleSizeCalculator } from '../components/widgets/SampleSizeCalculator'
+import { PowerCurve } from '../components/widgets/PowerCurve'
+import { KeyTakeaways } from '../components/content/KeyTakeaways'
+import { QuizSection } from '../components/content/QuizSection'
+import { DecisionScenario } from '../components/content/DecisionScenario'
 
 export default function L3() {
   return (
@@ -318,6 +322,8 @@ export default function L3() {
           <li>More precise estimates that are actionable for business decisions</li>
           <li>If the effect is real, the CI is more likely to exclude zero (leading to rejection of H{'₀'})</li>
         </ul>
+
+        <PowerCurve />
       </section>
 
       {/* ===== SECTION 10: FOUR LEVERS OF POWER ===== */}
@@ -412,6 +418,15 @@ export default function L3() {
       </section>
 
       <SampleSizeCalculator />
+
+      <DecisionScenario
+        scenario="Your product manager wants to detect a 0.1% lift in conversion rate (from 3.0% to 3.003%). The sample size calculator says you need 200 million users. Your site gets 2 million visitors per month. What do you recommend?"
+        choices={[
+          { label: "Run the experiment for 100 months to accumulate enough data", explanation: "While mathematically correct, this is impractical. A 100-month experiment would be confounded by product changes, seasonality, and user behavior shifts over time." },
+          { label: "Negotiate a larger MDE — perhaps 1% relative lift is the smallest change worth detecting", explanation: "This is the practical approach. If a 0.1% lift isn't worth the engineering cost to implement, there's no point detecting it. Align MDE with business significance.", isRecommended: true },
+          { label: "Just run it for 2 weeks and hope for the best", explanation: "An underpowered test is a waste of resources. With insufficient sample size, you'll almost certainly get a non-significant result even if the effect is real (high Type II error rate)." },
+        ]}
+      />
 
       {/* ===== SECTION 12: TRIGGERED EXPERIMENTS ===== */}
       <section>
@@ -609,6 +624,13 @@ export default function L3() {
         </p>
       </section>
 
+      <KeyTakeaways items={[
+        "A confidence interval gives a range of plausible values for the true parameter — it does NOT mean there's a 95% chance the true value is inside.",
+        "Statistical power is your probability of detecting a real effect; industry standard is 80% minimum.",
+        "The four levers of power: increase sample size, increase effect size, increase alpha, or decrease variance.",
+        "Triggered analysis can dramatically boost power by focusing only on users who actually encountered the change."
+      ]} />
+
       {/* ===== REVIEW QUESTIONS ===== */}
       <section>
         <h2 id="review-questions">Review Questions</h2>
@@ -720,6 +742,8 @@ export default function L3() {
           </div>
         </div>
       </section>
+
+      <QuizSection chapterId="l3" />
     </ChapterLayout>
   )
 }

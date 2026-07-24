@@ -11,12 +11,17 @@ const L4 = lazy(() => import('./chapters/L4'))
 const L5 = lazy(() => import('./chapters/L5'))
 const L6 = lazy(() => import('./chapters/L6'))
 const L7 = lazy(() => import('./chapters/L7'))
+const Glossary = lazy(() => import('./pages/Glossary'))
+const Formulas = lazy(() => import('./pages/Formulas'))
+const Flashcards = lazy(() => import('./pages/Flashcards'))
+const CaseStudies = lazy(() => import('./pages/CaseStudies'))
+const ConceptMap = lazy(() => import('./pages/ConceptMap'))
 
 function App() {
   return (
     <TooltipProvider>
       <AppShell>
-        <Suspense fallback={<div className="p-8 text-gray-400">Loading chapter...</div>}>
+        <Suspense fallback={<div className="p-8 text-gray-400">Loading...</div>}>
           <Routes>
             <Route path="/" element={<Navigate to="/intro" replace />} />
             <Route path="/intro" element={<Intro />} />
@@ -27,6 +32,11 @@ function App() {
             <Route path="/l5" element={<L5 />} />
             <Route path="/l6" element={<L6 />} />
             <Route path="/l7" element={<L7 />} />
+            <Route path="/glossary" element={<Glossary />} />
+            <Route path="/formulas" element={<Formulas />} />
+            <Route path="/flashcards" element={<Flashcards />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/map" element={<ConceptMap />} />
           </Routes>
         </Suspense>
       </AppShell>

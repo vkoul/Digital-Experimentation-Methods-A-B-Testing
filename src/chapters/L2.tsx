@@ -2,6 +2,11 @@ import { ChapterLayout } from '../components/content/ChapterLayout'
 import { ConceptLink } from '../components/tooltip/ConceptLink'
 import { MathBlock } from '../components/content/MathBlock'
 import { TypeITypeIITradeoff } from '../components/widgets/TypeITypeIITradeoff'
+import { CLTDemonstrator } from '../components/widgets/CLTDemonstrator'
+import { PValueVisualizer } from '../components/widgets/PValueVisualizer'
+import { KeyTakeaways } from '../components/content/KeyTakeaways'
+import { QuizSection } from '../components/content/QuizSection'
+import { DecisionScenario } from '../components/content/DecisionScenario'
 
 export default function L2() {
   return (
@@ -311,6 +316,8 @@ export default function L2() {
           if the treatment truly had zero effect, there would be only a 0.2% chance of seeing a difference
           this large (or larger) purely by random sampling variability.
         </p>
+
+        <PValueVisualizer />
       </section>
 
       {/* ===== 9. p-value Interpretation ===== */}
@@ -384,6 +391,8 @@ export default function L2() {
           is the standard approach. The CLT ensures its validity even when the underlying metric (e.g., revenue
           per user) is highly skewed.
         </p>
+
+        <CLTDemonstrator />
       </section>
 
       {/* ===== 11. Common Distributions ===== */}
@@ -491,6 +500,15 @@ export default function L2() {
         </p>
       </section>
 
+      <DecisionScenario
+        scenario="You're analyzing an A/B test and get a p-value of 0.048. Your manager says 'Great, it's significant — let's ship!' But you ran the test for only 3 days instead of the planned 14. What do you do?"
+        choices={[
+          { label: "Ship it — p < 0.05 means we have a real effect", explanation: "Early peeking inflates the false positive rate. A p-value of 0.048 after many peeks may have an effective error rate much higher than 5%." },
+          { label: "Continue the test to the planned duration and re-analyze at the end", explanation: "This is the correct approach under fixed-horizon testing. The pre-registered duration and analysis time protect against inflated false positives from repeated checking.", isRecommended: true },
+          { label: "Stop the test and declare no effect since we peeked", explanation: "You don't need to discard the test entirely, but you should complete it as planned. Sequential testing methods exist for valid early stopping, but they must be specified in advance." },
+        ]}
+      />
+
       {/* ===== 14. Multiple Testing Problem ===== */}
       <section>
         <h2 id="the-multiple-testing-problem">The Multiple Testing Problem</h2>
@@ -582,6 +600,13 @@ export default function L2() {
           sufficient to detect the minimum effect size you care about, within the time window you have.
         </p>
       </section>
+
+      <KeyTakeaways items={[
+        "The p-value is the probability of observing data as extreme as yours under the null hypothesis — NOT the probability that the null is true.",
+        "The Central Limit Theorem guarantees that sample means are approximately normal for large n, regardless of the population distribution.",
+        "Multiple testing inflates false positive rates — running 20 tests at alpha=0.05 virtually guarantees a spurious significant result.",
+        "Standard error shrinks with the square root of sample size: quadrupling n halves your SE."
+      ]} />
 
       {/* ===== Review Questions ===== */}
       <section>
@@ -711,6 +736,7 @@ export default function L2() {
         </div>
       </section>
 
+      <QuizSection chapterId="l2" />
     </ChapterLayout>
   )
 }

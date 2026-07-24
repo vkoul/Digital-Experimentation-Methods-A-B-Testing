@@ -2,6 +2,9 @@ import { ChapterLayout } from '../components/content/ChapterLayout'
 import { ConceptLink } from '../components/tooltip/ConceptLink'
 import { MathBlock } from '../components/content/MathBlock'
 import { SRMChecker } from '../components/widgets/SRMChecker'
+import { KeyTakeaways } from '../components/content/KeyTakeaways'
+import { QuizSection } from '../components/content/QuizSection'
+import { DecisionScenario } from '../components/content/DecisionScenario'
 
 export default function L4() {
   return (
@@ -383,6 +386,15 @@ export default function L4() {
         </p>
       </section>
 
+      <DecisionScenario
+        scenario="You're running an A/B test on a ride-sharing app's pricing algorithm. Treatment users get lower prices. After one week, you notice the treatment group has 15% more rides — but control users are complaining about longer wait times. What's happening?"
+        choices={[
+          { label: "The treatment is working — lower prices drive more rides. Ship it!", explanation: "You're ignoring the spillover effect. Treatment users taking more rides means fewer drivers available for control users. The 15% lift is inflated because part of it comes from stealing rides from control." },
+          { label: "This is a SUTVA violation — treatment is affecting control through shared driver supply", explanation: "Correct! In a marketplace, supply is shared. Lower prices for treatment → more rides → fewer available drivers for control. The causal effect is biased. Consider cluster-randomization by city/region.", isRecommended: true },
+          { label: "Ignore it — the control group complaints are anecdotal, not data", explanation: "Longer wait times for control IS data. When SUTVA is violated, the control group no longer represents the counterfactual. Your treatment effect estimate is biased upward." },
+        ]}
+      />
+
       {/* =========================================================
           10. Survivorship Bias
           ========================================================= */}
@@ -625,6 +637,13 @@ export default function L4() {
         </p>
       </section>
 
+      <KeyTakeaways items={[
+        "Sample Ratio Mismatch (SRM) is a critical sanity check — if your groups aren't the expected size, your results cannot be trusted.",
+        "A/A tests validate your experimentation platform by confirming the false positive rate matches the significance level.",
+        "SUTVA violations (interference between users) can bias results when one user's treatment affects another's outcome.",
+        "Novelty and primacy effects mean short-term experiment results may not reflect long-term impact — consider experiment duration carefully."
+      ]} />
+
       {/* =========================================================
           Review Questions
           ========================================================= */}
@@ -737,6 +756,7 @@ export default function L4() {
         </div>
       </section>
 
+      <QuizSection chapterId="l4" />
     </ChapterLayout>
   )
 }

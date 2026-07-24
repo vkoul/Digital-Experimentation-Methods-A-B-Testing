@@ -1,6 +1,9 @@
 import { ChapterLayout } from '../components/content/ChapterLayout'
 import { ConceptLink } from '../components/tooltip/ConceptLink'
 import { MathBlock } from '../components/content/MathBlock'
+import { KeyTakeaways } from '../components/content/KeyTakeaways'
+import { QuizSection } from '../components/content/QuizSection'
+import { DecisionScenario } from '../components/content/DecisionScenario'
 
 export default function L7() {
   return (
@@ -458,6 +461,15 @@ export default function L7() {
         </p>
       </section>
 
+      <DecisionScenario
+        scenario="A government policy change bans sugary drink advertising in one state but not neighboring states. You want to estimate the causal effect on soda consumption. You can't randomize. Which method fits best?"
+        choices={[
+          { label: "Regression Discontinuity — use the state border as the cutoff", explanation: "RDD requires a continuous running variable with a cutoff determining treatment. A state border is a geographic boundary, not a score threshold. People don't smoothly vary across the boundary in a way that enables RDD." },
+          { label: "Difference-in-Differences — compare the treated state to neighboring states before/after the ban", explanation: "DiD is ideal here. You have a clear pre/post period and natural control states. The parallel trends assumption can be checked using pre-ban consumption trends in both state groups.", isRecommended: true },
+          { label: "Instrumental Variables — use the state's political party as an instrument", explanation: "Political party might correlate with the ban (relevance) but likely affects health outcomes through many channels (education policy, healthcare access), violating the exclusion restriction." },
+        ]}
+      />
+
       {/* ================================================================
           SECTION 7: DiD Example — Seeking Alpha
           ================================================================ */}
@@ -756,6 +768,13 @@ export default function L7() {
         </p>
       </section>
 
+      <KeyTakeaways items={[
+        "Quasi-experiments can estimate causal effects when randomization is impossible, but require stronger assumptions than true experiments.",
+        "Difference-in-Differences relies on the parallel trends assumption — treatment and control would have followed the same trajectory absent intervention.",
+        "Regression Discontinuity exploits arbitrary cutoffs to create as-if-random assignment near the threshold.",
+        "Propensity Score Matching attempts to recreate experimental conditions by balancing observed covariates, but cannot address unobserved confounders."
+      ]} />
+
       {/* ================================================================
           REVIEW QUESTIONS
           ================================================================ */}
@@ -897,6 +916,7 @@ export default function L7() {
         </div>
       </section>
 
+      <QuizSection chapterId="l7" />
     </ChapterLayout>
   )
 }

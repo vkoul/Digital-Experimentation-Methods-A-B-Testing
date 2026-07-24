@@ -2,6 +2,9 @@ import { ChapterLayout } from '../components/content/ChapterLayout'
 import { ConceptLink } from '../components/tooltip/ConceptLink'
 import { MathBlock } from '../components/content/MathBlock'
 import { CUPEDVarianceReducer } from '../components/widgets/CUPEDVarianceReducer'
+import { KeyTakeaways } from '../components/content/KeyTakeaways'
+import { QuizSection } from '../components/content/QuizSection'
+import { DecisionScenario } from '../components/content/DecisionScenario'
 
 export default function L6() {
   return (
@@ -448,6 +451,15 @@ export default function L6() {
         <CUPEDVarianceReducer />
       </section>
 
+      <DecisionScenario
+        scenario="You're monitoring 50 metrics in your A/B test. Three metrics show p < 0.05. Your PM is excited about the 'wins.' How do you respond?"
+        choices={[
+          { label: "Celebrate — 3 significant results means the treatment is working on multiple dimensions", explanation: "With 50 metrics at α=0.05, you'd expect 2.5 false positives by chance alone. Getting 3 'significant' results is completely consistent with the null hypothesis (no real effect anywhere)." },
+          { label: "Apply Bonferroni correction: significance threshold becomes 0.05/50 = 0.001. None of the 3 pass.", explanation: "Bonferroni is valid but conservative. A better approach might be to distinguish the pre-registered primary metric (no correction needed) from exploratory metrics (which need correction).", isRecommended: false },
+          { label: "Check if the primary pre-registered metric is significant. Treat the other 49 as exploratory requiring correction.", explanation: "This is best practice. Your pre-registered OEC doesn't need correction. The 49 secondary metrics are exploratory — apply FDR (Benjamini-Hochberg) correction and flag any survivors for follow-up experiments.", isRecommended: true },
+        ]}
+      />
+
       {/* ============================================================
           SECTION 14: Regression with Control Variables
           ============================================================ */}
@@ -536,6 +548,13 @@ export default function L6() {
           then subtract). But conceptually, it is regression adjustment with a single covariate.
         </p>
       </section>
+
+      <KeyTakeaways items={[
+        "Stratification reduces variance by blocking on known covariates — it guarantees balance and improves precision without bias.",
+        "CUPED leverages pre-experiment data to reduce variance by up to 50%+ by subtracting the predictable component of the outcome.",
+        "The optimal CUPED theta equals the regression coefficient of post on pre — this maximizes variance reduction.",
+        "Post-stratification achieves similar gains to pre-stratification but can be applied retroactively after the experiment runs."
+      ]} />
 
       {/* ============================================================
           REVIEW QUESTIONS
@@ -647,6 +666,7 @@ export default function L6() {
           </div>
         </div>
       </section>
+      <QuizSection chapterId="l6" />
     </ChapterLayout>
   )
 }
