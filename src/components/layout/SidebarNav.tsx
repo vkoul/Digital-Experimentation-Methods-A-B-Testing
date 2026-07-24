@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
 const chapters = [
+  { path: '/intro', label: 'Introduction' },
   { path: '/l1', label: 'L1: A/B Testing Overview' },
   { path: '/l2', label: 'L2: Hypothesis Testing' },
   { path: '/l3', label: 'L3: CIs, Power & Sample Size' },
