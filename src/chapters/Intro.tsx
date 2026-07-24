@@ -73,57 +73,6 @@ export default function Intro() {
       </section>
 
       <section>
-        <h2 id="course-team">👥 Course Team</h2>
-        <div className="space-y-3">
-          <div className="bg-gray-50 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-            <p className="font-semibold text-gray-900 dark:text-gray-100">👨‍🏫 Course Instructor</p>
-            <p className="text-gray-700 dark:text-gray-300">
-              Shan Huang, Assistant Professor in Marketing at HKU Business School
-            </p>
-            <p className="text-gray-500 dark:text-gray-400 text-sm">✉️ Email: shanhh@hku.hk</p>
-            <p className="text-gray-500 dark:text-gray-400 text-sm">🌐 Website: <a href="https://www.shanhhuang.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">shanhhuang.com</a></p>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-            <p className="font-semibold text-gray-900 dark:text-gray-100">🎓 Course TA</p>
-            <p className="text-gray-700 dark:text-gray-300">
-              Chen Wang, PhD student at HKU Business School
-            </p>
-            <p className="text-gray-500 dark:text-gray-400 text-sm">✉️ Email: annacwang@connect.hku.hk</p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2 id="interactive-textbook-development">💻 Interactive Textbook Development</h2>
-        <div className="space-y-3">
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4">
-            <p className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Developer</p>
-            <p className="text-gray-700 dark:text-gray-300 mb-3">
-              Vikesh Koul
-            </p>
-            <div className="flex gap-4">
-              <a href="https://github.com/vkoul" target="_blank" rel="noopener noreferrer"
-                 className="inline-flex items-center gap-2 px-3 py-2 bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded transition-colors">
-                <span className="text-lg">🐙</span>
-                <span className="text-sm font-medium">GitHub</span>
-              </a>
-              <a href="https://www.linkedin.com/in/vikeshkoul/" target="_blank" rel="noopener noreferrer"
-                 className="inline-flex items-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded transition-colors">
-                <span className="text-lg">💼</span>
-                <span className="text-sm font-medium">LinkedIn</span>
-              </a>
-            </div>
-          </div>
-          <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700 rounded-lg p-4">
-            <p className="font-semibold text-gray-900 dark:text-gray-100 mb-2">AI Collaborator</p>
-            <p className="text-gray-700 dark:text-gray-300">
-              Claude (Anthropic AI) — for building interactive components, optimizing UX, and enhancing the learning experience
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section>
         <h2 id="course-roadmap">🗺️ Course Roadmap</h2>
         <div className="space-y-4">
           <div>
@@ -191,6 +140,57 @@ export default function Intro() {
               <li>Difference-in-Difference (DID)</li>
               <li>Propensity score matching (PSM)</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="course-team">👥 Course Team</h2>
+        <div className="space-y-3">
+          <div className="bg-gray-50 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+            <p className="font-semibold text-gray-900 dark:text-gray-100">👨‍🏫 Course Instructor</p>
+            <p className="text-gray-700 dark:text-gray-300">
+              Shan Huang, Assistant Professor in Marketing at HKU Business School
+            </p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">✉️ Email: shanhh@hku.hk</p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">🌐 Website: <a href="https://www.shanhhuang.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">shanhhuang.com</a></p>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+            <p className="font-semibold text-gray-900 dark:text-gray-100">🎓 Course TA</p>
+            <p className="text-gray-700 dark:text-gray-300">
+              Chen Wang, PhD student at HKU Business School
+            </p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">✉️ Email: annacwang@connect.hku.hk</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="interactive-textbook-development">💻 Interactive Textbook Development</h2>
+        <div className="space-y-3">
+          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4">
+            <p className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Developer</p>
+            <p className="text-gray-700 dark:text-gray-300 mb-3">
+              Vikesh Koul
+            </p>
+            <div className="flex gap-4">
+              <a href="https://github.com/vkoul" target="_blank" rel="noopener noreferrer"
+                 className="inline-flex items-center gap-2 px-3 py-2 bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded transition-colors">
+                <span className="text-lg">🐙</span>
+                <span className="text-sm font-medium">GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/vikeshkoul/" target="_blank" rel="noopener noreferrer"
+                 className="inline-flex items-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded transition-colors">
+                <span className="text-lg">💼</span>
+                <span className="text-sm font-medium">LinkedIn</span>
+              </a>
+            </div>
+          </div>
+          <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700 rounded-lg p-4">
+            <p className="font-semibold text-gray-900 dark:text-gray-100 mb-2">AI Collaborator</p>
+            <p className="text-gray-700 dark:text-gray-300">
+              Claude (Anthropic AI) — for building interactive components, optimizing UX, and enhancing the learning experience
+            </p>
           </div>
         </div>
       </section>
