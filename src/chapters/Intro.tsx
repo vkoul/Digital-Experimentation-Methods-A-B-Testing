@@ -4,7 +4,7 @@ export default function Intro() {
   return (
     <ChapterLayout title="Digital Experimentation Methods" subtitle="An Interactive Textbook on A/B Testing">
       <section>
-        <h2>📚 About This Textbook</h2>
+        <h2 id="about-this-textbook">📚 About This Textbook</h2>
         <p>
           This interactive textbook is built on the work of{' '}
           <strong>Shan Huang</strong>, Assistant Professor in Marketing at HKU Business School.
@@ -52,7 +52,7 @@ export default function Intro() {
       </section>
 
       <section>
-        <h2>🎯 Course Description</h2>
+        <h2 id="course-description">🎯 Course Description</h2>
         <p>
           The newly emerging capability to rapidly deploy and iterate online controlled experiments
           to assist decision-making in organizations is one of the most significant innovations in
@@ -72,7 +72,7 @@ export default function Intro() {
       </section>
 
       <section>
-        <h2>👥 Course Team</h2>
+        <h2 id="course-team">👥 Course Team</h2>
         <div className="space-y-3">
           <div className="bg-gray-50 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
             <p className="font-semibold text-gray-900 dark:text-gray-100">👨‍🏫 Course Instructor</p>
@@ -93,7 +93,7 @@ export default function Intro() {
       </section>
 
       <section>
-        <h2>🗺️ Course Roadmap</h2>
+        <h2 id="course-roadmap">🗺️ Course Roadmap</h2>
         <div className="space-y-4">
           <div>
             <h3 className="font-semibold text-gray-900 mb-2">1. A Comprehensive Overview of A/B Testing</h3>
@@ -145,7 +145,7 @@ export default function Intro() {
       </section>
 
       <section>
-        <h2>📖 Reference</h2>
+        <h2 id="reference">📖 Reference</h2>
         <p className="text-gray-700">
           Kohavi, Ron, Diane Tang, and Ya Xu.{' '}
           <em>Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing.</em>{' '}
@@ -157,7 +157,7 @@ export default function Intro() {
       </section>
 
       <section>
-        <h2>🙏 Acknowledgments</h2>
+        <h2 id="acknowledgments">🙏 Acknowledgments</h2>
         <p>
           This interactive textbook format was created to make the course content more accessible
           and engaging. All academic content and course structure are the original work of
@@ -166,7 +166,7 @@ export default function Intro() {
       </section>
 
       <section>
-        <h2>💻 Interactive Textbook Development</h2>
+        <h2 id="interactive-textbook-development">💻 Interactive Textbook Development</h2>
         <div className="space-y-3">
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4">
             <p className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Developer</p>
