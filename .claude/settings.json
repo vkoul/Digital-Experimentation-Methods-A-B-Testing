@@ -1,0 +1,79 @@
+{
+  "permissions": {
+    "bash": {
+      "allowed": [
+        "npm",
+        "git",
+        "node",
+        "ls",
+        "pwd",
+        "find",
+        "grep",
+        "cat",
+        "echo",
+        "mkdir",
+        "rm",
+        "mv",
+        "cp",
+        "cd",
+        "head",
+        "tail",
+        "wc",
+        "sed",
+        "awk",
+        "sort",
+        "uniq"
+      ]
+    },
+    "git": {
+      "allowed": [
+        "status",
+        "add",
+        "commit",
+        "push",
+        "pull",
+        "log",
+        "diff",
+        "branch",
+        "checkout",
+        "merge",
+        "tag",
+        "reset",
+        "restore",
+        "stash"
+      ]
+    },
+    "file_operations": {
+      "read": true,
+      "write": true,
+      "edit": true,
+      "delete": true,
+      "create": true
+    },
+    "npm": {
+      "allowed": [
+        "install",
+        "run",
+        "test",
+        "build",
+        "start",
+        "dev"
+      ]
+    },
+    "dangerous_operations": {
+      "git_force_push": false,
+      "git_reset_hard": false,
+      "rm_recursive": false,
+      "git_clean": false
+    }
+  },
+  "permissions_mode": "whitelist",
+  "prompt_dangerous": true,
+  "prompt_destructive": true,
+  "project": {
+    "name": "Digital Experimentation Methods - Interactive Textbook",
+    "owner": "Vikesh Koul",
+    "repository": "https://github.com/vkoul/Digital-Experimentation-Methods-A-B-Testing",
+    "tech_stack": ["React", "TypeScript", "Tailwind", "Vite"]
+  }
+}
