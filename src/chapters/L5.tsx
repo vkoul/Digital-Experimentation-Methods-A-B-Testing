@@ -20,6 +20,14 @@ export default function L5() {
         </ul>
       </section>
 
+      <section className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+        <p className="font-semibold text-amber-900 text-sm">📖 Textbook Reference — TOCE</p>
+        <ul className="list-disc pl-5 mt-2 text-sm text-amber-800 space-y-1">
+          <li>Chapter 18: Variance Estimation and Improved Sensitivity (pp. 193–198)</li>
+          <li>Chapter 20: Triggering for Improved Sensitivity (pp. 209–217)</li>
+        </ul>
+      </section>
+
       {/* ============================================================
           1. Variance and Key Statistics
           ============================================================ */}

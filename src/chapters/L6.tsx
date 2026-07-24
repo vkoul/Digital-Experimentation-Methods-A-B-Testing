@@ -21,6 +21,13 @@ export default function L6() {
         </ul>
       </section>
 
+      <section className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+        <p className="font-semibold text-amber-900 text-sm">📖 Textbook Reference — TOCE</p>
+        <ul className="list-disc pl-5 mt-2 text-sm text-amber-800 space-y-1">
+          <li>Chapter 18: Variance Estimation and Improved Sensitivity: Pitfalls and Solutions (pp. 193–198)</li>
+        </ul>
+      </section>
+
       {/* ============================================================
           SECTION 1: Overview
           ============================================================ */}

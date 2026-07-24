@@ -20,6 +20,15 @@ export default function L1() {
         </ul>
       </section>
 
+      <section className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+        <p className="font-semibold text-amber-900 text-sm">📖 Textbook Reference — TOCE</p>
+        <ul className="list-disc pl-5 mt-2 text-sm text-amber-800 space-y-1">
+          <li>Chapter 1: Introduction and Motivation (pp. 3–24)</li>
+          <li>Chapter 2: Running and Analyzing Experiments: An End-to-End Example (pp. 26–37)</li>
+          <li>Chapter 14: Choosing a Randomization Unit (pp. 166–169)</li>
+        </ul>
+      </section>
+
       {/* ───────────────────────────────────────────── */}
       <section>
         <h2 id="what-is-ab-testing">What is A/B Testing?</h2>

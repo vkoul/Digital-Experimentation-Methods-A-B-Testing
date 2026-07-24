@@ -22,6 +22,16 @@ export default function L4() {
         </ul>
       </section>
 
+      <section className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+        <p className="font-semibold text-amber-900 text-sm">📖 Textbook Reference — TOCE</p>
+        <ul className="list-disc pl-5 mt-2 text-sm text-amber-800 space-y-1">
+          <li>Chapter 3: Twyman's Law and Experimentation Trustworthiness (pp. 39–57)</li>
+          <li>Chapter 19: The A/A Test (pp. 200–207)</li>
+          <li>Chapter 21: Sample Ratio Mismatch and Other Trust-Related Guardrail Metrics (pp. 219–224)</li>
+          <li>Chapter 22: Leakage and Interference between Variants (pp. 226–234)</li>
+        </ul>
+      </section>
+
       {/* =========================================================
           1. Internal vs External Validity
           ========================================================= */}

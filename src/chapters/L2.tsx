@@ -21,6 +21,14 @@ export default function L2() {
         </ul>
       </section>
 
+      <section className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+        <p className="font-semibold text-amber-900 text-sm">📖 Textbook Reference — TOCE</p>
+        <ul className="list-disc pl-5 mt-2 text-sm text-amber-800 space-y-1">
+          <li>Chapter 17: The Statistics behind Online Controlled Experiments (pp. 185–192)</li>
+          <li>Chapter 3: Misinterpretation of the Statistical Results (pp. 40–43)</li>
+        </ul>
+      </section>
+
       {/* ===== 1. Population vs Sample ===== */}
       <section>
         <h2 id="population-vs-sample">Population vs Sample</h2>

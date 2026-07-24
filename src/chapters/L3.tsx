@@ -22,6 +22,14 @@ export default function L3() {
         </ul>
       </section>
 
+      <section className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+        <p className="font-semibold text-amber-900 text-sm">📖 Textbook Reference — TOCE</p>
+        <ul className="list-disc pl-5 mt-2 text-sm text-amber-800 space-y-1">
+          <li>Chapter 17: Type I/II Errors and Power (pp. 189–192)</li>
+          <li>Chapter 20: Triggering for Improved Sensitivity (pp. 209–217)</li>
+        </ul>
+      </section>
+
       {/* ===== SECTION 1: CONFIDENCE INTERVALS ===== */}
       <section>
         <h2 id="confidence-intervals">Confidence Intervals</h2>

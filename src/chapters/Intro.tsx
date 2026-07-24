@@ -134,6 +134,9 @@ export default function Intro() {
           <em>Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing.</em>{' '}
           Cambridge University Press, 2020.
         </p>
+        <p className="text-gray-600 mt-2">
+          Throughout this textbook, this book is referred to as <strong>TOCE</strong>.
+        </p>
       </section>
 
       <section>
