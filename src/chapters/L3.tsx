@@ -1,6 +1,7 @@
 import { ChapterLayout } from '../components/content/ChapterLayout'
 import { ConceptLink } from '../components/tooltip/ConceptLink'
 import { MathBlock } from '../components/content/MathBlock'
+import { RevealAnswer } from '../components/content/RevealAnswer'
 import { CIWidthDemonstrator } from '../components/widgets/CIWidthDemonstrator'
 import { SampleSizeCalculator } from '../components/widgets/SampleSizeCalculator'
 import { PowerCurve } from '../components/widgets/PowerCurve'
@@ -333,34 +334,34 @@ export default function L3() {
           Power depends on exactly four quantities. Understanding which you can control is
           key to experiment planning:
         </p>
-        <table>
+        <table className="w-full border-collapse">
           <thead>
-            <tr>
-              <th>Factor</th>
-              <th>Effect on Power</th>
-              <th>Controllable?</th>
+            <tr className="bg-blue-600 dark:bg-blue-700 text-white">
+              <th className="border border-blue-400 dark:border-blue-600 px-4 py-2 text-left font-semibold">Factor</th>
+              <th className="border border-blue-400 dark:border-blue-600 px-4 py-2 text-left font-semibold">Effect on Power</th>
+              <th className="border border-blue-400 dark:border-blue-600 px-4 py-2 text-left font-semibold">Controllable?</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>Sample size n</strong></td>
-              <td>Power increases with n</td>
-              <td>Yes — run longer, allocate more traffic</td>
+            <tr className="hover:bg-gray-50 dark:hover:bg-gray-800">
+              <td className="border border-gray-200 dark:border-gray-700 px-4 py-2"><strong>Sample size n</strong></td>
+              <td className="border border-gray-200 dark:border-gray-700 px-4 py-2">Power increases with n</td>
+              <td className="border border-gray-200 dark:border-gray-700 px-4 py-2">Yes — run longer, allocate more traffic</td>
             </tr>
-            <tr>
-              <td><strong>Significance level {'α'}</strong></td>
-              <td>Larger {'α'} {'→'} more power (but more false positives)</td>
-              <td>Yes — but usually fixed at 0.05 by convention</td>
+            <tr className="hover:bg-gray-50 dark:hover:bg-gray-800">
+              <td className="border border-gray-200 dark:border-gray-700 px-4 py-2"><strong>Significance level {'α'}</strong></td>
+              <td className="border border-gray-200 dark:border-gray-700 px-4 py-2">Larger {'α'} {'→'} more power (but more false positives)</td>
+              <td className="border border-gray-200 dark:border-gray-700 px-4 py-2">Yes — but usually fixed at 0.05 by convention</td>
             </tr>
-            <tr>
-              <td><strong>Effect size {'δ'}</strong></td>
-              <td>Larger effects are easier to detect</td>
-              <td>Not really — determined by the treatment itself</td>
+            <tr className="hover:bg-gray-50 dark:hover:bg-gray-800">
+              <td className="border border-gray-200 dark:border-gray-700 px-4 py-2"><strong>Effect size {'δ'}</strong></td>
+              <td className="border border-gray-200 dark:border-gray-700 px-4 py-2">Larger effects are easier to detect</td>
+              <td className="border border-gray-200 dark:border-gray-700 px-4 py-2">Not really — determined by the treatment itself</td>
             </tr>
-            <tr>
-              <td><strong>Variance {'σ'}{'²'}</strong></td>
-              <td>Lower variance {'→'} more power (less noise)</td>
-              <td>Partially — use <ConceptLink conceptId="cuped">CUPED</ConceptLink>, triggering, stratification</td>
+            <tr className="hover:bg-gray-50 dark:hover:bg-gray-800">
+              <td className="border border-gray-200 dark:border-gray-700 px-4 py-2"><strong>Variance {'σ'}{'²'}</strong></td>
+              <td className="border border-gray-200 dark:border-gray-700 px-4 py-2">Lower variance {'→'} more power (less noise)</td>
+              <td className="border border-gray-200 dark:border-gray-700 px-4 py-2">Partially — use <ConceptLink conceptId="cuped">CUPED</ConceptLink>, triggering, stratification</td>
             </tr>
           </tbody>
         </table>
@@ -489,46 +490,58 @@ export default function L3() {
         <p>
           The CI is entirely below 0.5 (e.g., CI = [0.1, 0.3]). The effect is statistically significant
           and positive, but too small to matter.
-          <br /><strong>Decision: Don't launch.</strong> The effect exists but is not worth the cost.
         </p>
+        <RevealAnswer label="What's the decision?">
+          <strong>Decision: Don't launch.</strong> The effect exists but is not worth the cost.
+        </RevealAnswer>
 
         <h3>Scenario 2: CI entirely above practical significance threshold</h3>
         <p>
           The CI is entirely above 0.5 (e.g., CI = [0.7, 1.2]). The effect is both statistically
           and practically significant.
-          <br /><strong>Decision: Launch.</strong> Strong evidence of a meaningful improvement.
         </p>
+        <RevealAnswer label="What's the decision?">
+          <strong>Decision: Launch.</strong> Strong evidence of a meaningful improvement.
+        </RevealAnswer>
 
         <h3>Scenario 3: Statistically significant, but below practical threshold</h3>
         <p>
           Significant effect {'>'} 0, but the entire CI is below 0.5 (e.g., CI = [0.05, 0.4]).
           You have confidently estimated a real but tiny effect.
-          <br /><strong>Decision: Don't launch.</strong> You've precisely measured that the effect
-          is too small to be worthwhile.
         </p>
+        <RevealAnswer label="What's the decision?">
+          <strong>Decision: Don't launch.</strong> You've precisely measured that the effect
+          is too small to be worthwhile.
+        </RevealAnswer>
 
         <h3>Scenario 4: Not significant, point estimate below threshold</h3>
         <p>
           CI includes zero and the point estimate is below 0.5 (e.g., CI = [-0.2, 0.6]).
-          <br /><strong>Decision: Uncertain / Underpowered.</strong> You cannot conclude whether the
-          effect is zero, small, or moderate. Consider running longer or with more traffic.
         </p>
+        <RevealAnswer label="What's the decision?">
+          <strong>Decision: Uncertain / Underpowered.</strong> You cannot conclude whether the
+          effect is zero, small, or moderate. Consider running longer or with more traffic.
+        </RevealAnswer>
 
         <h3>Scenario 5: Not significant, point estimate above threshold</h3>
         <p>
           CI includes zero but the point estimate is above 0.5 (e.g., CI = [-0.1, 1.2]).
-          <br /><strong>Decision: Uncertain / Underpowered.</strong> The data is consistent with
-          a large positive effect but also with zero. The experiment needs more power.
         </p>
+        <RevealAnswer label="What's the decision?">
+          <strong>Decision: Uncertain / Underpowered.</strong> The data is consistent with
+          a large positive effect but also with zero. The experiment needs more power.
+        </RevealAnswer>
 
         <h3>Scenario 6: Significant {'>'} 0, not significant vs. threshold</h3>
         <p>
           The CI excludes zero but straddles 0.5 (e.g., CI = [0.2, 0.8]). You know the effect is
           positive, but you're uncertain whether it's large enough to be practically important.
-          <br /><strong>Decision: OK to launch, but consider increasing sample.</strong> There is
+        </p>
+        <RevealAnswer label="What's the decision?">
+          <strong>Decision: OK to launch, but consider increasing sample.</strong> There is
           real positive value; the question is only whether it crosses the practical threshold.
           Many teams would launch in this case, especially if the feature has low maintenance cost.
-        </p>
+        </RevealAnswer>
       </section>
 
       {/* ===== SECTION 14: INCREASING POWER ===== */}
@@ -593,10 +606,10 @@ export default function L3() {
         <h3>Worked Example: 10 Underpowered Experiments</h3>
         <p>
           Suppose you ran 10 independent experiments testing the same hypothesis, each underpowered.
-          The p-values are: 0.04, 0.07, 0.50, 0.08, 0.30, 0.05, 0.20, 0.03, 0.05, 0.06.
+          The p-values are: <code className="bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 px-1.5 py-0.5 rounded font-mono text-sm">0.04</code>, <code className="bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 px-1.5 py-0.5 rounded font-mono text-sm">0.07</code>, <code className="bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 px-1.5 py-0.5 rounded font-mono text-sm">0.50</code>, <code className="bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 px-1.5 py-0.5 rounded font-mono text-sm">0.08</code>, <code className="bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 px-1.5 py-0.5 rounded font-mono text-sm">0.30</code>, <code className="bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 px-1.5 py-0.5 rounded font-mono text-sm">0.05</code>, <code className="bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 px-1.5 py-0.5 rounded font-mono text-sm">0.20</code>, <code className="bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 px-1.5 py-0.5 rounded font-mono text-sm">0.03</code>, <code className="bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 px-1.5 py-0.5 rounded font-mono text-sm">0.05</code>, <code className="bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 px-1.5 py-0.5 rounded font-mono text-sm">0.06</code>.
         </p>
         <p>
-          None individually provides overwhelming evidence (only p = 0.03 and 0.04 are clearly below 0.05).
+          None individually provides overwhelming evidence (only <code className="bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 px-1.5 py-0.5 rounded font-mono text-sm">p = 0.03</code> and <code className="bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 px-1.5 py-0.5 rounded font-mono text-sm">0.04</code> are clearly below 0.05).
           But combined:
         </p>
         <MathBlock tex="\begin{aligned}
