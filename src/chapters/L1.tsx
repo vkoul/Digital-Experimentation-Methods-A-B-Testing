@@ -7,7 +7,7 @@ export default function L1() {
     <ChapterLayout title="A/B Testing Overview" subtitle="Lecture 1 — Why experiment?">
 
       <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
-        <h2 className="text-blue-900">Learning Objectives</h2>
+        <h2 id="learning-objectives" className="text-blue-900">Learning Objectives</h2>
         <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
         <ul className="list-disc pl-6 space-y-1 text-blue-800">
           <li>Define A/B testing and distinguish it from observational studies</li>
@@ -22,7 +22,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>What is A/B Testing?</h2>
+        <h2 id="what-is-ab-testing">What is A/B Testing?</h2>
         <p>
           A/B testing — also known as <strong>online controlled experiments</strong>, flights,
           bucket tests, or randomized controlled trials (RCTs) — is the gold standard method for
@@ -62,7 +62,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>Core Structure of an A/B Test</h2>
+        <h2 id="core-structure-of-an-ab-test">Core Structure of an A/B Test</h2>
         <p>
           The mechanics of a standard A/B test follow a consistent pattern:
         </p>
@@ -102,7 +102,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>The Bing Long Ad Titles Story</h2>
+        <h2 id="the-bing-long-ad-titles-story">The Bing Long Ad Titles Story</h2>
         <p>
           One of the most famous examples of A/B testing in practice comes from Microsoft's Bing
           search engine. An engineer proposed a simple change: make the ad title links longer by
@@ -142,7 +142,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>Google's 41 Shades of Blue</h2>
+        <h2 id="googles-41-shades-of-blue">Google's 41 Shades of Blue</h2>
         <p>
           In a now-legendary experiment, Google wanted to determine the best color for links on their
           search results page and ads. Rather than relying on a designer's intuition, they created{' '}
@@ -164,7 +164,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>Key Themes in A/B Testing</h2>
+        <h2 id="key-themes-in-ab-testing">Key Themes in A/B Testing</h2>
         <p>
           Several overarching themes emerge from industry experience with experimentation:
         </p>
@@ -207,7 +207,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>The HiPPO Problem</h2>
+        <h2 id="the-hippo-problem">The HiPPO Problem</h2>
         <p>
           HiPPO stands for <strong>Highest Paid Person's Opinion</strong>. In many organizations,
           product decisions are driven by the most senior person in the room — a VP, a director, or
@@ -230,7 +230,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>Why Experiments, Not Observational Studies?</h2>
+        <h2 id="why-experiments-not-observational-studies">Why Experiments, Not Observational Studies?</h2>
         <p>
           Why not simply analyze existing data to understand what works? The fundamental problem with
           observational data is that <strong>correlation does not imply causation</strong>.
@@ -284,7 +284,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>Hierarchy of Causal Evidence</h2>
+        <h2 id="hierarchy-of-causal-evidence">Hierarchy of Causal Evidence</h2>
         <p>
           Not all evidence is created equal. In terms of the strength of causal claims, evidence can
           be ranked from weakest to strongest:
@@ -321,7 +321,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>Experiment Terminology</h2>
+        <h2 id="experiment-terminology">Experiment Terminology</h2>
 
         <h3>Metrics and the OEC</h3>
         <p>
@@ -371,7 +371,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>Good Metrics vs. Bad Metrics</h2>
+        <h2 id="good-metrics-vs-bad-metrics">Good Metrics vs. Bad Metrics</h2>
         <p>
           Choosing the right <ConceptLink conceptId="oec">OEC</ConceptLink> is critical. A poorly
           chosen metric can lead you to ship changes that hurt users or the business, even when the
@@ -410,7 +410,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>Randomization Unit: Principles and Tradeoffs</h2>
+        <h2 id="randomization-unit-principles-and-tradeoffs">Randomization Unit: Principles and Tradeoffs</h2>
         <p>
           Choosing the <ConceptLink conceptId="randomization-unit">randomization unit</ConceptLink>{' '}
           involves two core principles and a fundamental tradeoff.
@@ -450,7 +450,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>Agile Development and MVP</h2>
+        <h2 id="agile-development-and-mvp">Agile Development and MVP</h2>
         <p>
           A/B testing fits naturally within an <strong>agile development</strong> philosophy. The
           traditional waterfall approach — months of planning, building a complete feature, then
@@ -472,7 +472,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>Organizational Tenets for Experimentation</h2>
+        <h2 id="organizational-tenets-for-experimentation">Organizational Tenets for Experimentation</h2>
         <p>
           Companies that succeed at experimentation culture typically embrace the following tenets:
         </p>
@@ -506,7 +506,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>Roles in A/B Testing</h2>
+        <h2 id="roles-in-ab-testing">Roles in A/B Testing</h2>
         <p>
           A/B testing is a team sport. The key roles and their responsibilities:
         </p>
@@ -537,7 +537,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>When Experiments Cannot Be Done</h2>
+        <h2 id="when-experiments-cannot-be-done">When Experiments Cannot Be Done</h2>
         <p>
           Despite being the gold standard, there are situations where randomized controlled
           experiments are not feasible or ethical:
@@ -577,7 +577,7 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>End-to-End Example: Online Commerce Coupon</h2>
+        <h2 id="end-to-end-example-online-commerce-coupon">End-to-End Example: Online Commerce Coupon</h2>
         <p>
           Let us walk through a complete example to see how all the concepts fit together. Suppose
           you work at an e-commerce company and notice that the checkout page has a prominent
@@ -708,7 +708,21 @@ export default function L1() {
 
       {/* ───────────────────────────────────────────── */}
       <section>
-        <h2>Exercises</h2>
+        <h2 id="review-questions">Review Questions</h2>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>What is the fundamental difference between an A/B test and an observational study?</li>
+          <li>What does the HiPPO problem refer to, and how does experimentation address it?</li>
+          <li>Name the four key components of an experiment design (hint: OEC, parameters, conditions, randomization unit) and explain each briefly.</li>
+          <li>Why is the consistency principle important when choosing a randomization unit?</li>
+          <li>What are two examples of "bad" OEC metrics, and why are they problematic?</li>
+          <li>Explain why the WeChat Red Pocket before/after comparison fails to establish causality.</li>
+          <li>What percentage of experiments at major tech companies (Microsoft, Google, Netflix) show no positive effect? What does this imply for organizational culture?</li>
+        </ol>
+      </section>
+
+      {/* ───────────────────────────────────────────── */}
+      <section>
+        <h2 id="exercises">Exercises</h2>
 
         <h3>Exercise 1: Amazon Prime Movie Recommendations</h3>
         <p>
@@ -745,21 +759,23 @@ export default function L1() {
 
         <h3>Exercise 3: Bing SERP Truncation</h3>
         <p>
-          Bing is running an experiment on the search engine results page (SERP): Control shows
-          10 organic results on the first page, Treatment shows only 8 results. The{' '}
-          <ConceptLink conceptId="oec">OEC</ConceptLink> is click-through rate on the first page
-          of results.
+          Bing is running an experiment on the search engine results page (SERP): Control shows{' '}
+          <code>10</code> organic results on the first page, Treatment shows only <code>8</code>{' '}
+          results. The <ConceptLink conceptId="oec">OEC</ConceptLink> is{' '}
+          <MathBlock tex="\text{CTR}" /> on the first page of results.
         </p>
         <ul>
-          <li>Predict which condition (8 results or 10 results) will have a higher CTR.</li>
+          <li>Predict which condition (<code>8</code> results or <code>10</code> results) will have
+            a higher CTR.</li>
           <li>Explain your reasoning carefully. Consider what happens to user behavior when fewer
             results are shown.</li>
         </ul>
 
         <h3>Exercise 4: Feature Adoption and Engagement</h3>
         <p>
-          A company launches a new feature and observes that users who adopted the feature have 40%
-          higher engagement (measured by daily active minutes) than users who did not adopt it.
+          A company launches a new feature and observes that users who adopted the feature have{' '}
+          <code>40%</code> higher engagement (measured by daily active minutes) than users who did
+          not adopt it.
         </p>
         <ul>
           <li>Can the company conclude that the feature <em>caused</em> higher engagement?</li>

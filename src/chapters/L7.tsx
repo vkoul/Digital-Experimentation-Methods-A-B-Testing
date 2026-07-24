@@ -7,7 +7,7 @@ export default function L7() {
     <ChapterLayout title="Observational Causal Studies" subtitle="Lecture 7 — When randomization isn't possible">
 
       <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
-        <h2 className="text-blue-900">Learning Objectives</h2>
+        <h2 id="learning-objectives" className="text-blue-900">Learning Objectives</h2>
         <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
         <ul className="list-disc pl-6 space-y-1 text-blue-800">
           <li>Explain when and why randomized experiments are not feasible</li>
@@ -24,7 +24,7 @@ export default function L7() {
           SECTION 1: Hierarchy of Evidence
           ================================================================ */}
       <section>
-        <h2>1. Hierarchy of Evidence (Review)</h2>
+        <h2 id="hierarchy-of-evidence">1. Hierarchy of Evidence (Review)</h2>
         <p>
           Throughout this course, we have emphasized that not all evidence is created equal.
           Before diving into observational causal methods, let us revisit the hierarchy of
@@ -72,7 +72,7 @@ export default function L7() {
           SECTION 2: When Experiments Are Not Possible
           ================================================================ */}
       <section>
-        <h2>2. When Experiments Are Not Possible</h2>
+        <h2 id="when-experiments-are-not-possible">2. When Experiments Are Not Possible</h2>
         <p>
           Randomized experiments are the gold standard, but there are important scenarios where
           they simply cannot be conducted:
@@ -163,7 +163,7 @@ export default function L7() {
           SECTION 3: Quasi-Experiments Framework
           ================================================================ */}
       <section>
-        <h2>3. The Quasi-Experiment Framework</h2>
+        <h2 id="the-quasi-experiment-framework">3. The Quasi-Experiment Framework</h2>
         <p>
           The goal of any quasi-experiment is to measure the <strong>causal impact</strong> of a
           treatment without the benefit of randomization. The fundamental challenge can be expressed
@@ -217,7 +217,7 @@ export default function L7() {
           SECTION 4: Interrupted Time Series (ITS)
           ================================================================ */}
       <section>
-        <h2>4. Interrupted Time Series (ITS)</h2>
+        <h2 id="interrupted-time-series">4. Interrupted Time Series (ITS)</h2>
         <p>
           Interrupted Time Series is the simplest quasi-experimental design. It applies when a
           treatment is a <strong>large, sudden shock</strong> affecting the <em>same population</em>
@@ -299,7 +299,7 @@ export default function L7() {
           SECTION 5: Regression Discontinuity Design (RDD)
           ================================================================ */}
       <section>
-        <h2>5. Regression Discontinuity Design (RDD)</h2>
+        <h2 id="regression-discontinuity-design">5. Regression Discontinuity Design (RDD)</h2>
         <p>
           <ConceptLink conceptId="regression-discontinuity">Regression Discontinuity Design</ConceptLink>{' '}
           exploits situations where treatment is assigned based on whether a continuous
@@ -384,7 +384,7 @@ export default function L7() {
           SECTION 6: Difference-in-Differences (DiD)
           ================================================================ */}
       <section>
-        <h2>6. Difference-in-Differences (DiD)</h2>
+        <h2 id="difference-in-differences">6. Difference-in-Differences (DiD)</h2>
         <p>
           <ConceptLink conceptId="difference-in-differences">Difference-in-Differences</ConceptLink>{' '}
           is perhaps the most widely used quasi-experimental method in industry. It applies when
@@ -454,7 +454,7 @@ export default function L7() {
           SECTION 7: DiD Example — Seeking Alpha
           ================================================================ */}
       <section>
-        <h2>7. DiD in Practice: Seeking Alpha</h2>
+        <h2 id="did-in-practice-seeking-alpha">7. DiD in Practice: Seeking Alpha</h2>
         <p>
           A well-known application of DiD in the tech industry comes from Seeking Alpha, a
           crowd-sourced financial content platform (Chen, Hu, and Huang, 2019).
@@ -514,7 +514,7 @@ export default function L7() {
           SECTION 8: Propensity Score Matching (PSM)
           ================================================================ */}
       <section>
-        <h2>8. Propensity Score Matching (PSM)</h2>
+        <h2 id="propensity-score-matching">8. Propensity Score Matching (PSM)</h2>
         <p>
           <ConceptLink conceptId="propensity-score-matching">Propensity Score Matching</ConceptLink>{' '}
           constructs comparable treatment and control groups based on observed characteristics.
@@ -580,7 +580,7 @@ export default function L7() {
           SECTION 9: PSM Applications and Related Methods
           ================================================================ */}
       <section>
-        <h2>9. PSM Applications and Related Methods</h2>
+        <h2 id="psm-applications-and-related-methods">9. PSM Applications and Related Methods</h2>
 
         <h3>Application: cross-platform comparison</h3>
         <p>
@@ -625,7 +625,7 @@ export default function L7() {
           SECTION 10: Combining Methods
           ================================================================ */}
       <section>
-        <h2>10. Combining Methods: PSM + DiD</h2>
+        <h2 id="combining-methods-psm-did">10. Combining Methods: PSM + DiD</h2>
         <p>
           In practice, researchers often combine methods to strengthen causal identification.
           The most common combination is <strong>PSM + DiD</strong>:
@@ -668,7 +668,7 @@ export default function L7() {
           SECTION 11: Course Wrap-Up / Big Picture
           ================================================================ */}
       <section>
-        <h2>11. Course Wrap-Up: The Big Picture</h2>
+        <h2 id="course-wrap-up-the-big-picture">11. Course Wrap-Up: The Big Picture</h2>
         <p>
           This course has taken you on a journey through the full stack of experimentation
           and causal inference in the tech industry. Let us step back and see how all the
@@ -749,10 +749,26 @@ export default function L7() {
       </section>
 
       {/* ================================================================
+          REVIEW QUESTIONS
+          ================================================================ */}
+      <section>
+        <h2 id="review-questions">Review Questions</h2>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Why do observational causal methods produce lower-trust evidence than randomized experiments?</li>
+          <li>Write out the decomposition: Outcome(treated) - Outcome(untreated) = ? What is selection bias and why is it hard to eliminate?</li>
+          <li>In an ITS design, what serves as the counterfactual? What are its main confounders?</li>
+          <li>What assumption must hold for RDD to be valid? Give an example of how it could be violated.</li>
+          <li>In Difference-in-Differences, what does the parallel trends assumption mean? How would you check it?</li>
+          <li>What does Propensity Score Matching balance — observed characteristics, unobserved characteristics, or both? What is its fundamental limitation?</li>
+          <li>How can combining PSM with DiD strengthen a causal claim compared to using either method alone?</li>
+        </ol>
+      </section>
+
+      {/* ================================================================
           EXERCISES
           ================================================================ */}
       <section>
-        <h2>Exercises</h2>
+        <h2 id="exercises">Exercises</h2>
 
         <h3>Problem 1: App Store Policy Change (DiD)</h3>
         <p>
@@ -779,7 +795,7 @@ export default function L7() {
         <h3>Problem 2: Seller Badge Effect (RDD)</h3>
         <p>
           Taobao gives sellers a "Star Seller" badge when their customer satisfaction score
-          exceeds 4.8 out of 5.0. You want to estimate the causal effect of receiving the
+          exceeds <code>4.8</code>/<code>5.0</code>. You want to estimate the causal effect of receiving the
           badge on monthly sales revenue.
         </p>
         <ol type="a">
@@ -821,13 +837,13 @@ export default function L7() {
 
         <h3>Problem 4: Premium Subscription Selection Bias (PSM)</h3>
         <p>
-          A streaming company finds that premium subscribers have 3x the engagement (hours
+          A streaming company finds that premium subscribers have <code>3x</code> the engagement (hours
           watched per week) of free-tier users. The product team claims that "upgrading to
           premium causes higher engagement" and wants to push all users to upgrade.
         </p>
         <ol type="a">
           <li>
-            Explain the selection bias in this comparison. Why does the 3x difference likely
+            Explain the selection bias in this comparison. Why does the <code>3x</code> difference likely
             overstate the causal effect of premium on engagement?
           </li>
           <li>
@@ -844,7 +860,7 @@ export default function L7() {
         <h3>Problem 5: Combining PSM and DiD (Seeking Alpha Style)</h3>
         <p>
           Seeking Alpha launches a monetary incentive program for content contributors
-          ($10 per 1,000 views). You observe that writers who enrolled in the incentive
+          ($<code>10</code> per <code>1,000</code> views). You observe that writers who enrolled in the incentive
           program began posting more frequently after enrollment. You want to estimate the
           causal effect of monetary incentives on content production.
         </p>

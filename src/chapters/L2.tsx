@@ -8,7 +8,7 @@ export default function L2() {
     <ChapterLayout title="Statistics Critical to Experimentation I" subtitle="Lecture 2 — The statistical engine behind A/B tests">
 
       <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
-        <h2 className="text-blue-900">Learning Objectives</h2>
+        <h2 id="learning-objectives" className="text-blue-900">Learning Objectives</h2>
         <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
         <ul className="list-disc pl-6 space-y-1 text-blue-800">
           <li>Distinguish between population and sample, and explain statistical inference as the bridge between them</li>
@@ -23,7 +23,7 @@ export default function L2() {
 
       {/* ===== 1. Population vs Sample ===== */}
       <section>
-        <h2>Population vs Sample</h2>
+        <h2 id="population-vs-sample">Population vs Sample</h2>
         <p>
           Before we can test anything, we need to distinguish between the <strong>population</strong> and
           the <strong>sample</strong>. The population is the abstract, potentially infinite set of all units
@@ -50,7 +50,7 @@ export default function L2() {
 
       {/* ===== 2. Potential Outcomes Framework ===== */}
       <section>
-        <h2>The Potential Outcomes Framework</h2>
+        <h2 id="the-potential-outcomes-framework">The Potential Outcomes Framework</h2>
         <p>
           The potential outcomes framework (also called the Rubin Causal Model) gives us a rigorous way to
           define causal effects. For each user <em>i</em>, we define two potential outcomes:
@@ -94,7 +94,7 @@ export default function L2() {
 
       {/* ===== 3. Hypothesis Testing ===== */}
       <section>
-        <h2>Hypothesis Testing</h2>
+        <h2 id="hypothesis-testing">Hypothesis Testing</h2>
         <p>
           We now have an estimate of the treatment effect. But is it real, or just noise? Hypothesis testing
           provides the formal framework to answer this question.
@@ -122,7 +122,7 @@ export default function L2() {
 
       {/* ===== 4. The t-test ===== */}
       <section>
-        <h2>The t-test</h2>
+        <h2 id="the-t-test">The t-test</h2>
         <p>
           The t-test quantifies how many{' '}
           <ConceptLink conceptId="standard-error">standard errors</ConceptLink> the observed difference is away
@@ -150,7 +150,7 @@ export default function L2() {
 
       {/* ===== 5. Standard Error Derivation ===== */}
       <section>
-        <h2>Standard Error: From Variance to Precision</h2>
+        <h2 id="standard-error-from-variance-to-precision">Standard Error: From Variance to Precision</h2>
         <p>
           The <ConceptLink conceptId="standard-error">standard error</ConceptLink> is the key quantity
           connecting sample size to statistical precision. Let us derive it step by step.
@@ -193,7 +193,7 @@ export default function L2() {
 
       {/* ===== 6. Step-by-step Numerical Example ===== */}
       <section>
-        <h2>Worked Example: Two-Sample t-test</h2>
+        <h2 id="worked-example-two-sample-t-test">Worked Example: Two-Sample t-test</h2>
         <p>
           Let us work through a complete numerical example. Suppose we run a small experiment with 12 users
           in each group. The observed outcomes are:
@@ -235,7 +235,7 @@ export default function L2() {
 
       {/* ===== 7. Three Cases of t-tests ===== */}
       <section>
-        <h2>Three Cases of t-tests</h2>
+        <h2 id="three-cases-of-t-tests">Three Cases of t-tests</h2>
         <p>
           Depending on the experimental design and assumptions about variance, we use different variants
           of the t-test:
@@ -282,7 +282,7 @@ export default function L2() {
 
       {/* ===== 8. p-value ===== */}
       <section>
-        <h2>The p-value</h2>
+        <h2 id="the-p-value">The p-value</h2>
         <p>
           The <strong>p-value</strong> is the probability of observing a test statistic as extreme as, or more
           extreme than, the one actually observed — assuming the null hypothesis is true:
@@ -307,7 +307,7 @@ export default function L2() {
 
       {/* ===== 9. p-value Interpretation ===== */}
       <section>
-        <h2>Common Misinterpretations of the p-value</h2>
+        <h2 id="common-misinterpretations-of-the-p-value">Common Misinterpretations of the p-value</h2>
         <p>
           The p-value is one of the most misunderstood concepts in statistics. Let us clarify what it is
           <em>not</em>:
@@ -345,7 +345,7 @@ export default function L2() {
 
       {/* ===== 10. z-test and CLT ===== */}
       <section>
-        <h2>The z-test and the Central Limit Theorem</h2>
+        <h2 id="the-z-test-and-the-central-limit-theorem">The z-test and the Central Limit Theorem</h2>
         <p>
           When sample sizes are large, we can replace the t-test with a <strong>z-test</strong>. The
           justification comes from the{' '}
@@ -380,7 +380,7 @@ export default function L2() {
 
       {/* ===== 11. Common Distributions ===== */}
       <section>
-        <h2>Common Distributions in Experimentation</h2>
+        <h2 id="common-distributions-in-experimentation">Common Distributions in Experimentation</h2>
         <p>
           Many experiment metrics follow specific distributions. Knowing the distribution helps us compute
           variance and plan sample sizes.
@@ -420,7 +420,7 @@ export default function L2() {
 
       {/* ===== 12. Lift ===== */}
       <section>
-        <h2>Lift and Percent Change</h2>
+        <h2 id="lift-and-percent-change">Lift and Percent Change</h2>
         <p>
           In industry, results are often communicated as <strong>relative changes</strong> rather than
           absolute differences. The lift is defined as:
@@ -454,7 +454,7 @@ export default function L2() {
 
       {/* ===== 13. Type I Error ===== */}
       <section>
-        <h2>Type I Error (False Positives)</h2>
+        <h2 id="type-i-error-false-positives">Type I Error (False Positives)</h2>
         <p>
           A <ConceptLink conceptId="type-i-error">Type I error</ConceptLink> occurs when we reject the null
           hypothesis even though it is actually true — we conclude there is an effect when there is none.
@@ -485,7 +485,7 @@ export default function L2() {
 
       {/* ===== 14. Multiple Testing Problem ===== */}
       <section>
-        <h2>The Multiple Testing Problem</h2>
+        <h2 id="the-multiple-testing-problem">The Multiple Testing Problem</h2>
         <p>
           In practice, experiments rarely test a single metric. A typical A/B test might evaluate 20 or more
           metrics simultaneously: click-through rate, conversion rate, revenue, session duration, page views,
@@ -542,7 +542,7 @@ export default function L2() {
 
       {/* ===== 15. Effect of Sample Size ===== */}
       <section>
-        <h2>The Effect of Sample Size</h2>
+        <h2 id="the-effect-of-sample-size">The Effect of Sample Size</h2>
         <p>
           Sample size is the most direct lever for improving the sensitivity of an experiment. The chain of
           influence is:
@@ -575,16 +575,30 @@ export default function L2() {
         </p>
       </section>
 
+      {/* ===== Review Questions ===== */}
+      <section>
+        <h2 id="review-questions">Review Questions</h2>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>What is the difference between a population parameter and a sample statistic?</li>
+          <li>In the potential outcomes framework, why can we never observe both Yi(1) and Yi(0) for the same unit?</li>
+          <li>Explain in plain language what the t-statistic measures — what does it mean to be "3 standard errors away from zero"?</li>
+          <li>What are three common misinterpretations of p-values?</li>
+          <li>When does the t-distribution converge to the z (standard normal) distribution, and why?</li>
+          <li>If you run 20 independent hypothesis tests at α = 0.05, how many false positives do you expect? How does metric tiering address this?</li>
+          <li>Explain the relationship between sample size and the width of a confidence interval.</li>
+        </ol>
+      </section>
+
       {/* ===== Exercises ===== */}
       <section>
-        <h2>Exercises</h2>
+        <h2 id="exercises">Exercises</h2>
 
         <h3>Exercise 1: Population and Sample</h3>
         <p>
           WeChat is testing an algorithm-based feed ranking against the current chronological ranking for
-          the Moments feature. The experiment runs for 30 days. The{' '}
+          the Moments feature. The experiment runs for <code>30</code> days. The{' '}
           <ConceptLink conceptId="oec">OEC</ConceptLink> is "number of days with at least one click in the
-          30-day window" (a binomial-type metric). 10% of active users are enrolled in the experiment.
+          30-day window" (a binomial-type metric). <code>10%</code> of active users are enrolled in the experiment.
         </p>
         <p>
           (a) Define the population for this experiment.
@@ -603,10 +617,10 @@ export default function L2() {
           interactions per session):
         </p>
         <p>
-          <strong>Control (n = 12):</strong> 51.4, 52.0, 45.9, 54.3, 50.1, 52.7, 47.8, 49.2, 52.4, 50.3, 53.1, 48.5
+          <strong>Control (<MathBlock tex="n = 12" />):</strong> 51.4, 52.0, 45.9, 54.3, 50.1, 52.7, 47.8, 49.2, 52.4, 50.3, 53.1, 48.5
         </p>
         <p>
-          <strong>Treatment (n = 12):</strong> 50.1, 54.2, 55.3, 52.1, 57.4, 53.0, 55.8, 51.3, 54.7, 56.2, 52.9, 53.5
+          <strong>Treatment (<MathBlock tex="n = 12" />):</strong> 50.1, 54.2, 55.3, 52.1, 57.4, 53.0, 55.8, 51.3, 54.7, 56.2, 52.9, 53.5
         </p>
         <p>
           (a) Calculate the sample mean for each group.
@@ -621,39 +635,39 @@ export default function L2() {
           (d) Calculate the t-statistic.
         </p>
         <p>
-          (e) With df = 22 and alpha = 0.05 (two-sided critical value approximately equals 2.074), should you reject the null
+          (e) With <MathBlock tex="\text{df} = 22" /> and <MathBlock tex="\alpha = 0.05" /> (two-sided critical value <MathBlock tex="\approx 2.074" />), should you reject the null
           hypothesis? Interpret the result.
         </p>
 
         <h3>Exercise 3: Multiple Testing</h3>
         <p>
-          Before launching an experiment, you run a pre-experiment check (A/A test) comparing 42 user
+          Before launching an experiment, you run a pre-experiment check (A/A test) comparing <code>42</code> user
           characteristics between the control and treatment groups to verify randomization quality. You find
-          3 characteristics with statistically significant differences at alpha = 0.05.
+          <code>3</code> characteristics with statistically significant differences at <MathBlock tex="\alpha = 0.05" />.
         </p>
         <p>
           (a) Under the null hypothesis (randomization is correct), how many significant results would you
           expect by chance?
         </p>
         <p>
-          (b) Should you be concerned about 3 significant results? Why or why not?
+          (b) Should you be concerned about <code>3</code> significant results? Why or why not?
         </p>
         <p>
           (c) At what number of significant results (approximately) should you begin to suspect a problem with
           the randomization? Hint: consider the expected value plus 2 standard deviations, treating the count
-          as Binomial(42, 0.05).
+          as <MathBlock tex="\text{Binomial}(42,\; 0.05)" />.
         </p>
 
         <h3>Exercise 4: p-value Interpretation</h3>
         <p>
-          A colleague runs an A/B test and obtains p = 0.06. They state: "The null hypothesis has a 6% chance
+          A colleague runs an A/B test and obtains <MathBlock tex="p = 0.06" />. They state: "The null hypothesis has a 6% chance
           of being true, so we are almost certain the treatment works."
         </p>
         <p>
           (a) Identify the error in this reasoning.
         </p>
         <p>
-          (b) Provide the correct interpretation of p = 0.06.
+          (b) Provide the correct interpretation of <MathBlock tex="p = 0.06" />.
         </p>
         <p>
           (c) What additional information would you need to assess how likely the treatment truly has an effect?
@@ -661,9 +675,9 @@ export default function L2() {
 
         <h3>Exercise 5: z-test vs t-test Convergence</h3>
         <p>
-          You run an experiment with k = 1000 users per group. The metric is a Bernoulli variable (clicked or
-          not) with baseline probability p = 0.5. The treatment achieves a lift of 1.1 (i.e., treatment
-          click rate is 0.55).
+          You run an experiment with <MathBlock tex="k = 1000" /> users per group. The metric is a Bernoulli variable (clicked or
+          not) with baseline probability <MathBlock tex="p = 0.5" />. The treatment achieves a lift of <code>1.1</code> (i.e., treatment
+          click rate is <code>0.55</code>).
         </p>
         <p>
           (a) Would you expect the z-test and the t-test to give similar or different results for this
@@ -673,7 +687,7 @@ export default function L2() {
           (b) Compute the standard error of the difference in proportions using the known Bernoulli variance formula.
         </p>
         <p>
-          (c) Compute the z-statistic and determine whether the result is significant at alpha = 0.05.
+          (c) Compute the z-statistic and determine whether the result is significant at <MathBlock tex="\alpha = 0.05" />.
         </p>
       </section>
 

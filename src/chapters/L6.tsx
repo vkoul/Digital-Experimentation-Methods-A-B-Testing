@@ -8,7 +8,7 @@ export default function L6() {
     <ChapterLayout title="Improving Sensitivity II" subtitle="Lecture 6 — Variance Reduction">
 
       <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
-        <h2 className="text-blue-900">Learning Objectives</h2>
+        <h2 id="learning-objectives" className="text-blue-900">Learning Objectives</h2>
         <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
         <ul className="list-disc pl-6 space-y-1 text-blue-800">
           <li>Explain stratification (block design) and how it removes between-strata variance</li>
@@ -25,7 +25,7 @@ export default function L6() {
           SECTION 1: Overview
           ============================================================ */}
       <section>
-        <h2>Overview</h2>
+        <h2 id="overview">Overview</h2>
         <p>
           In Lecture 5 we addressed sensitivity through metric choice, triggering, and interleaving.
           This lecture tackles the problem from a different angle: <strong>variance reduction</strong>.
@@ -50,7 +50,7 @@ export default function L6() {
           SECTION 2: Stratification (Block Design)
           ============================================================ */}
       <section>
-        <h2>Stratification (Block Design)</h2>
+        <h2 id="stratification">Stratification (Block Design)</h2>
         <p>
           Stratification is the most well-known at-assignment variance reduction technique. In the
           experimental-design literature it is also called <em>blocking</em>. The idea is simple:
@@ -79,7 +79,7 @@ export default function L6() {
           SECTION 3: The Idea Behind Stratification
           ============================================================ */}
       <section>
-        <h2>The Idea Behind Stratification</h2>
+        <h2 id="the-idea-behind-stratification">The Idea Behind Stratification</h2>
         <p>
           The key insight is a variance decomposition. The variance of the sample mean under simple
           random sampling can be written as:
@@ -106,7 +106,7 @@ export default function L6() {
           SECTION 4: How to Choose Strata
           ============================================================ */}
       <section>
-        <h2>How to Choose Strata</h2>
+        <h2 id="how-to-choose-strata">How to Choose Strata</h2>
         <p>
           Stratification only helps when the stratification variable is correlated with the outcome.
           The stronger the correlation, the more between-strata variance we remove. Here are the
@@ -138,7 +138,7 @@ export default function L6() {
           SECTION 5: Full Stratification Procedure
           ============================================================ */}
       <section>
-        <h2>Full Stratification Procedure (5 Steps)</h2>
+        <h2 id="full-stratification-procedure">Full Stratification Procedure (5 Steps)</h2>
         <p>
           Let <MathBlock tex="K" /> be the number of strata, <MathBlock tex="p_k" /> the population proportion
           in stratum <MathBlock tex="k" />, and <MathBlock tex="n" /> the total sample size.
@@ -179,7 +179,7 @@ export default function L6() {
           SECTION 6: Variance Decomposition Proof
           ============================================================ */}
       <section>
-        <h2>Variance Decomposition (Law of Total Variance)</h2>
+        <h2 id="variance-decomposition">Variance Decomposition (Law of Total Variance)</h2>
         <p>
           We prove that the total variance decomposes into within-strata and between-strata components.
           Let <MathBlock tex="S" /> denote the stratum indicator. By the Law of Total Variance:
@@ -212,7 +212,7 @@ export default function L6() {
           SECTION 7: Numerical Exercise
           ============================================================ */}
       <section>
-        <h2>Numerical Example: Stratification in Practice</h2>
+        <h2 id="numerical-example">Numerical Example: Stratification in Practice</h2>
         <p>
           Suppose our OEC is weekly purchase amount ($). We have <MathBlock tex="n = 1000" /> users,
           evenly split by gender: <MathBlock tex="p(\text{male}) = p(\text{female}) = 0.5" />.
@@ -251,7 +251,7 @@ export default function L6() {
           SECTION 8: Netflix Implementation
           ============================================================ */}
       <section>
-        <h2>Netflix Implementation of Stratification</h2>
+        <h2 id="netflix-implementation">Netflix Implementation of Stratification</h2>
         <p>
           Netflix has published their real-time stratification system. Two key design choices stand out:
         </p>
@@ -289,7 +289,7 @@ export default function L6() {
           SECTION 9: Post-Stratification
           ============================================================ */}
       <section>
-        <h2>Post-Stratification</h2>
+        <h2 id="post-stratification">Post-Stratification</h2>
         <p>
           Post-stratification is a popular <strong>post-assignment</strong> variance reduction
           technique. The key difference from stratification: randomization is simple (completely
@@ -320,7 +320,7 @@ export default function L6() {
           SECTION 10: Comparison at Netflix
           ============================================================ */}
       <section>
-        <h2>Comparison of Techniques at Netflix</h2>
+        <h2 id="comparison-of-techniques">Comparison of Techniques at Netflix</h2>
         <p>
           Netflix has compared all three techniques — stratification, post-stratification, and CUPED —
           head-to-head on their platform. Key findings:
@@ -351,7 +351,7 @@ export default function L6() {
           SECTION 11: CUPED
           ============================================================ */}
       <section>
-        <h2>CUPED: Controlled Experiments Using Pre-Experiment Data</h2>
+        <h2 id="cuped">CUPED: Controlled Experiments Using Pre-Experiment Data</h2>
         <p>
           <ConceptLink conceptId="cuped">CUPED</ConceptLink> (Deng et al., 2013) is the most widely
           adopted variance reduction technique in the tech industry. Microsoft, Netflix, Booking.com,
@@ -388,7 +388,7 @@ export default function L6() {
           SECTION 12: Choosing theta and X
           ============================================================ */}
       <section>
-        <h2>Choosing the Optimal Theta and Covariate</h2>
+        <h2 id="choosing-optimal-theta">Choosing the Optimal Theta and Covariate</h2>
         <p>
           The variance of the CUPED-adjusted outcome is:
         </p>
@@ -432,7 +432,7 @@ export default function L6() {
           CUPED Widget
           ============================================================ */}
       <section>
-        <h2>Interactive: CUPED Variance Reduction</h2>
+        <h2 id="interactive-cuped">Interactive: CUPED Variance Reduction</h2>
         <p>
           Use the slider below to explore how the pre-post correlation <MathBlock tex="\rho" /> affects
           the variance reduction achieved by CUPED. Notice how the scatter becomes tighter along the
@@ -445,7 +445,7 @@ export default function L6() {
           SECTION 14: Regression with Control Variables
           ============================================================ */}
       <section>
-        <h2>Regression with Control Variables</h2>
+        <h2 id="regression-with-control-variables">Regression with Control Variables</h2>
         <p>
           A more general approach to variance reduction is to run a regression with control variables:
         </p>
@@ -492,7 +492,7 @@ export default function L6() {
           SECTION 15: Relationship Between CUPED and Regression
           ============================================================ */}
       <section>
-        <h2>Relationship Between CUPED and Regression</h2>
+        <h2 id="relationship-cuped-regression">Relationship Between CUPED and Regression</h2>
         <p>
           CUPED and regression adjustment are essentially the same technique viewed from different
           angles:
@@ -531,10 +531,26 @@ export default function L6() {
       </section>
 
       {/* ============================================================
+          REVIEW QUESTIONS
+          ============================================================ */}
+      <section>
+        <h2 id="review-questions">Review Questions</h2>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>What is the key idea behind stratification — what source of variance does it remove?</li>
+          <li>How should you choose the stratification variable? What property should it have relative to the OEC?</li>
+          <li>What is the difference between stratification (at-assignment) and post-stratification (post-assignment)? When are they approximately equivalent?</li>
+          <li>In CUPED, why does subtracting θX from Y not bias the treatment effect estimate?</li>
+          <li>What is the optimal θ in CUPED, and what determines the maximum possible variance reduction?</li>
+          <li>If the correlation between pre-experiment and post-experiment metrics is ρ = 0.7, what fraction of variance does CUPED remove?</li>
+          <li>How does regression with control variables relate to CUPED? What additional flexibility does regression offer?</li>
+        </ol>
+      </section>
+
+      {/* ============================================================
           EXERCISES
           ============================================================ */}
       <section>
-        <h2>Exercises</h2>
+        <h2 id="exercises">Exercises</h2>
 
         <div className="space-y-6 mt-4">
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
@@ -544,8 +560,8 @@ export default function L6() {
               <MathBlock tex="n = 1000" />. Summary statistics:
             </p>
             <ul className="list-disc pl-6 mt-1">
-              <li>Males: <MathBlock tex="\bar{Y}_{\text{male}} = 20" />, <MathBlock tex="\sigma^2_{\text{male}} = 20" /></li>
-              <li>Females: <MathBlock tex="\bar{Y}_{\text{female}} = 50" />, <MathBlock tex="\sigma^2_{\text{female}} = 10" /></li>
+              <li>Males: <MathBlock tex="\bar{Y}(\text{male}) = 20" />, <MathBlock tex="\text{Var}(\text{male}) = 20" /></li>
+              <li>Females: <MathBlock tex="\bar{Y}(\text{female}) = 50" />, <MathBlock tex="\text{Var}(\text{female}) = 10" /></li>
             </ul>
             <p className="mt-2">Calculate:</p>
             <ol className="list-[lower-alpha] pl-6">
@@ -559,7 +575,7 @@ export default function L6() {
             <p className="font-semibold text-gray-800">Exercise 2: Stratification and New Users</p>
             <p className="mt-2">
               In the Netflix queue system, explain why stratification only works well for existing users.
-              What would you do for a product with 40% new users each week? Discuss at least two approaches
+              What would you do for a product with <code>40%</code> new users each week? Discuss at least two approaches
               and their tradeoffs.
             </p>
           </div>
@@ -575,10 +591,10 @@ export default function L6() {
             </p>
             <ol className="list-[lower-alpha] pl-6 mt-2">
               <li>
-                Calculate <MathBlock tex="\theta^* = \text{Cov}(\texttt{pre\_click},\, \texttt{click}) \;/\; \text{Var}(\texttt{pre\_click})" />.
+                Calculate <MathBlock tex="\theta^* = \text{Cov}(\text{pre\_click},\, \text{click}) \;/\; \text{Var}(\text{pre\_click})" />.
               </li>
               <li>
-                Compute the CUPED-adjusted outcome: <MathBlock tex="Y_{\text{cuped}} = \texttt{click} - \theta^* \cdot \texttt{pre\_click}" />.
+                Compute the CUPED-adjusted outcome: <MathBlock tex="Y_{\text{cuped}} = \text{click} - \theta^* \cdot \text{pre\_click}" />.
               </li>
               <li>
                 Compare <MathBlock tex="\text{Var}(\Delta_{\text{cuped}})" /> vs.{' '}
@@ -593,9 +609,9 @@ export default function L6() {
               Using the same dataset, run three OLS regressions:
             </p>
             <ol className="list-[lower-alpha] pl-6 mt-2">
-              <li><MathBlock tex="\texttt{click} \sim \texttt{treat}" /></li>
-              <li><MathBlock tex="\texttt{click} \sim \texttt{treat} + \texttt{pre\_click}" /></li>
-              <li><MathBlock tex="\texttt{click} \sim \texttt{treat} + \texttt{pre\_click} + \texttt{gender}" /></li>
+              <li><MathBlock tex="\text{click} \sim \text{treat}" /></li>
+              <li><MathBlock tex="\text{click} \sim \text{treat} + \text{pre\_click}" /></li>
+              <li><MathBlock tex="\text{click} \sim \text{treat} + \text{pre\_click} + \text{gender}" /></li>
             </ol>
             <p className="mt-2">
               What changes and what does not change in the coefficient on{' '}

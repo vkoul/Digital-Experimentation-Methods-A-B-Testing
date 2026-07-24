@@ -9,7 +9,7 @@ export default function L3() {
     <ChapterLayout title="Statistics Critical to Experimentation II" subtitle="Lecture 3 — Confidence intervals, power, and sample size planning">
 
       <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
-        <h2 className="text-blue-900">Learning Objectives</h2>
+        <h2 id="learning-objectives" className="text-blue-900">Learning Objectives</h2>
         <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
         <ul className="list-disc pl-6 space-y-1 text-blue-800">
           <li>Construct and correctly interpret confidence intervals for treatment effects</li>
@@ -24,7 +24,7 @@ export default function L3() {
 
       {/* ===== SECTION 1: CONFIDENCE INTERVALS ===== */}
       <section>
-        <h2>Confidence Intervals</h2>
+        <h2 id="confidence-intervals">Confidence Intervals</h2>
         <p>
           In Lecture 2, we focused on p-values and reject/don't-reject decisions. But a p-value tells
           you nothing about the <em>size</em> of an effect or the <em>precision</em> of your estimate.
@@ -57,7 +57,7 @@ export default function L3() {
 
       {/* ===== SECTION 2: CI / P-VALUE DUALITY ===== */}
       <section>
-        <h2>CI and p-value Duality</h2>
+        <h2 id="ci-and-p-value-duality">CI and p-value Duality</h2>
         <p>
           Confidence intervals and hypothesis tests are two views of the same underlying inference.
           They carry an exact duality:
@@ -85,7 +85,7 @@ export default function L3() {
 
       {/* ===== SECTION 3: CI AND TYPE I ERROR ===== */}
       <section>
-        <h2>CI and Type I Error</h2>
+        <h2 id="ci-and-type-i-error">CI and Type I Error</h2>
         <p>
           There is a direct link between confidence intervals and{' '}
           <ConceptLink conceptId="type-i-error">Type I error</ConceptLink>. By construction, a
@@ -106,7 +106,7 @@ export default function L3() {
 
       {/* ===== SECTION 4: CORRECT INTERPRETATION ===== */}
       <section>
-        <h2>The Correct Interpretation of a Confidence Interval</h2>
+        <h2 id="the-correct-interpretation-of-a-confidence-interval">The Correct Interpretation of a Confidence Interval</h2>
         <p>
           This is one of the most commonly misunderstood concepts in statistics. Let us be precise:
         </p>
@@ -135,7 +135,7 @@ export default function L3() {
 
       {/* ===== SECTION 5: NORMALITY ASSUMPTION ===== */}
       <section>
-        <h2>The Normality Assumption (and Why It Is Misunderstood)</h2>
+        <h2 id="the-normality-assumption-and-why-it-is-misunderstood">The Normality Assumption (and Why It Is Misunderstood)</h2>
         <p>
           A common misconception: "To use a z-test or t-test, the outcome variable Y must be
           normally distributed." This is <strong>wrong</strong>.
@@ -167,7 +167,7 @@ export default function L3() {
 
       {/* ===== SECTION 6: SKEWNESS AND SAMPLE SIZE ===== */}
       <section>
-        <h2>Skewness and Required Sample Size</h2>
+        <h2 id="skewness-and-required-sample-size">Skewness and Required Sample Size</h2>
         <p>
           How large is "large enough" for the CLT to kick in? The answer depends on the
           <strong> skewness</strong> of the underlying distribution. A useful rule of thumb
@@ -217,7 +217,7 @@ export default function L3() {
 
       {/* ===== SECTION 7: BOOTSTRAP CIs ===== */}
       <section>
-        <h2>Bootstrap Confidence Intervals</h2>
+        <h2 id="bootstrap-confidence-intervals">Bootstrap Confidence Intervals</h2>
         <p>
           The CLT-based CI works for means and differences in means. But what about other statistics?
           If your metric is a <em>median</em>, a <em>percentile</em> (e.g., p95 latency), a <em>ratio
@@ -260,7 +260,7 @@ export default function L3() {
 
       {/* ===== SECTION 8: TYPE II ERROR ===== */}
       <section>
-        <h2>Type II Error: The Silent Failure</h2>
+        <h2 id="type-ii-error-the-silent-failure">Type II Error: The Silent Failure</h2>
         <p>
           A <ConceptLink conceptId="type-ii-error">Type II error</ConceptLink> occurs when you fail
           to reject a false null hypothesis — there <em>is</em> a real treatment effect, but your
@@ -291,7 +291,7 @@ export default function L3() {
 
       {/* ===== SECTION 9: STATISTICAL POWER ===== */}
       <section>
-        <h2>Statistical Power</h2>
+        <h2 id="statistical-power">Statistical Power</h2>
         <p>
           <ConceptLink conceptId="statistical-power">Statistical power</ConceptLink> is the probability
           of correctly rejecting a false null hypothesis — detecting a real effect when one exists:
@@ -314,7 +314,7 @@ export default function L3() {
 
       {/* ===== SECTION 10: FOUR LEVERS OF POWER ===== */}
       <section>
-        <h2>The Four Levers of Power</h2>
+        <h2 id="the-four-levers-of-power">The Four Levers of Power</h2>
         <p>
           Power depends on exactly four quantities. Understanding which you can control is
           key to experiment planning:
@@ -360,7 +360,7 @@ export default function L3() {
 
       {/* ===== SECTION 11: SAMPLE SIZE FORMULA ===== */}
       <section>
-        <h2>The Sample Size Formula</h2>
+        <h2 id="the-sample-size-formula">The Sample Size Formula</h2>
         <p>
           For a two-sided test with equal-sized groups, {'α'} = 0.05, and 80% power
           (z<sub>0.025</sub> = 1.96, z<sub>0.20</sub> = 0.84), the general formula is:
@@ -407,7 +407,7 @@ export default function L3() {
 
       {/* ===== SECTION 12: TRIGGERED EXPERIMENTS ===== */}
       <section>
-        <h2>Triggered Experiments: Massive Power Gains</h2>
+        <h2 id="triggered-experiments-massive-power-gains">Triggered Experiments: Massive Power Gains</h2>
         <p>
           A <ConceptLink conceptId="triggered-experiment">triggered experiment</ConceptLink> restricts
           analysis to users who actually <em>encountered</em> the treatment. This can dramatically
@@ -453,7 +453,7 @@ export default function L3() {
 
       {/* ===== SECTION 13: LAUNCH DECISION FRAMEWORK ===== */}
       <section>
-        <h2>Launch Decision Framework: Beyond "Significant or Not"</h2>
+        <h2 id="launch-decision-framework-beyond-significant-or-not">Launch Decision Framework: Beyond "Significant or Not"</h2>
         <p>
           Real launch decisions are not simply "p {'<'} 0.05 {'→'} ship." You must consider both
           <strong> statistical significance</strong> and <strong>practical significance</strong>. Suppose
@@ -510,7 +510,7 @@ export default function L3() {
 
       {/* ===== SECTION 14: INCREASING POWER ===== */}
       <section>
-        <h2>What to Do When Underpowered</h2>
+        <h2 id="what-to-do-when-underpowered">What to Do When Underpowered</h2>
         <p>
           Scenarios 4 and 5 above describe the frustrating situation of an inconclusive experiment.
           Here are your options:
@@ -554,7 +554,7 @@ export default function L3() {
 
       {/* ===== SECTION 15: FISHER'S META-ANALYSIS ===== */}
       <section>
-        <h2>Fisher's Meta-analysis</h2>
+        <h2 id="fishers-meta-analysis">Fisher's Meta-analysis</h2>
         <p>
           Fisher's method combines p-values from k independent experiments into a single test
           statistic. The key result:
@@ -601,21 +601,34 @@ export default function L3() {
         </p>
       </section>
 
+      {/* ===== REVIEW QUESTIONS ===== */}
+      <section>
+        <h2 id="review-questions">Review Questions</h2>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>What additional information does a confidence interval provide compared to a p-value alone?</li>
+          <li>Explain the correct frequentist interpretation of a 95% confidence interval. Why is it wrong to say "there is a 95% probability the true value is in this interval"?</li>
+          <li>What is the relationship between Type II error and statistical power?</li>
+          <li>Name the four factors that determine statistical power, and indicate which two the experimenter can directly control.</li>
+          <li>In the sample size formula n = 16σ²/δ², what happens to required n if you want to detect an effect half as large?</li>
+          <li>Describe the six scenarios in the launch decision framework. In which scenarios should you definitely not launch?</li>
+          <li>When is Fisher's meta-analysis useful, and what assumption does it require about the experiments being combined?</li>
+        </ol>
+      </section>
+
       {/* ===== EXERCISES ===== */}
       <section>
-        <h2>Exercises</h2>
+        <h2 id="exercises">Exercises</h2>
 
         <h3>Exercise 1: Confidence Interval Calculations</h3>
         <p>
           Consider the WeChat Moments experiment where the outcome is binary (engaged/not engaged)
-          with an observed lift of 1.1 percentage points, baseline proportion p = 0.5, and n = 1000
-          users per group.
+          with an observed <MathBlock tex="\text{lift} = 1.1" /> percentage points, baseline proportion <MathBlock tex="p = 0.5" />, and <MathBlock tex="n = 1000" /> users per group.
         </p>
         <ol>
           <li>Calculate the 95% confidence interval using the t-distribution (df = n{'₁'} + n{'₂'} - 2).</li>
           <li>Calculate the 95% confidence interval using the z-approximation (1.96).</li>
           <li>Compare the widths of the two intervals. How large is the practical difference?</li>
-          <li>Recompute the z-based 95% CI for sample sizes n = 100, 1000, 2000, and 5000 per group.
+          <li>Recompute the z-based 95% CI for sample sizes n = <code>100</code>, <code>1000</code>, <code>2000</code>, and <code>5000</code> per group.
             How does the CI width change? At what point does the interval exclude zero?</li>
         </ol>
 
@@ -662,9 +675,9 @@ export default function L3() {
         <ol>
           <li>Using the formula n = 16{'σ'}{'²'}/{'δ'}{'²'}, calculate the minimum sample
             size per group for 80% power.</li>
-          <li>If you can only afford n = 200 per group, what is your actual power? (Hint: solve the
+          <li>If you can only afford n = <code>200</code> per group, what is your actual power? (Hint: solve the
             power formula backwards, or compute the non-centrality parameter and look up power.)</li>
-          <li>If you have n = 2000 per group, what is your power?</li>
+          <li>If you have n = <code>2000</code> per group, what is your power?</li>
           <li>At what minimum sample size do you achieve 80% power?</li>
           <li>Suggest two approaches (other than increasing n) that could improve power for this experiment.</li>
         </ol>
@@ -672,10 +685,10 @@ export default function L3() {
         <h3>Exercise 5: Fisher's Meta-analysis</h3>
         <p>
           You have run 10 underpowered experiments testing the hypothesis that a new recommendation
-          algorithm improves click-through rate. The one-sided p-values from the 10 experiments are:
+          algorithm improves click-through rate. The one-sided <MathBlock tex="p" />-values from the 10 experiments are:
         </p>
         <p>
-          0.04, 0.07, 0.50, 0.08, 0.30, 0.05, 0.20, 0.03, 0.05, 0.06
+          <code>0.04</code>, <code>0.07</code>, <code>0.50</code>, <code>0.08</code>, <code>0.30</code>, <code>0.05</code>, <code>0.20</code>, <code>0.03</code>, <code>0.05</code>, <code>0.06</code>
         </p>
         <ol>
           <li>Compute -2 ln(p<sub>i</sub>) for each experiment.</li>

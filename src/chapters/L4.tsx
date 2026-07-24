@@ -8,7 +8,7 @@ export default function L4() {
     <ChapterLayout title="Internal & External Validity" subtitle="Lecture 4 — Can you trust your results, and do they generalize?">
 
       <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
-        <h2 className="text-blue-900">Learning Objectives</h2>
+        <h2 id="learning-objectives" className="text-blue-900">Learning Objectives</h2>
         <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
         <ul className="list-disc pl-6 space-y-1 text-blue-800">
           <li>Distinguish between internal and external validity and explain why internal validity is a prerequisite</li>
@@ -26,7 +26,7 @@ export default function L4() {
           1. Internal vs External Validity
           ========================================================= */}
       <section>
-        <h2>Internal vs External Validity</h2>
+        <h2 id="internal-vs-external-validity">Internal vs External Validity</h2>
         <p>
           Every experiment must answer two questions. The first is about <strong>internal validity</strong>:
           given the data you collected, can you correctly attribute the observed difference to the
@@ -50,7 +50,7 @@ export default function L4() {
           2. Threats to Internal Validity
           ========================================================= */}
       <section>
-        <h2>What Threatens Internal Validity</h2>
+        <h2 id="what-threatens-internal-validity">What Threatens Internal Validity</h2>
         <p>
           Internal validity is threatened whenever groups differ in ways <em>other</em> than the
           treatment they receive. There are four primary channels through which this happens:
@@ -84,7 +84,7 @@ export default function L4() {
           3. Sanity Checks
           ========================================================= */}
       <section>
-        <h2>Sanity Checks</h2>
+        <h2 id="sanity-checks">Sanity Checks</h2>
         <p>
           Before examining your primary metrics, you should run a battery of sanity checks.
           These fall into two categories:
@@ -128,7 +128,7 @@ export default function L4() {
           4. Sample Ratio Mismatch (SRM)
           ========================================================= */}
       <section>
-        <h2>Sample Ratio Mismatch (SRM)</h2>
+        <h2 id="sample-ratio-mismatch">Sample Ratio Mismatch (SRM)</h2>
         <p>
           A <ConceptLink conceptId="srm">Sample Ratio Mismatch</ConceptLink> occurs when the observed
           ratio of users across experimental groups does not match the expected assignment ratio.
@@ -161,7 +161,7 @@ export default function L4() {
           5. SRM Tests
           ========================================================= */}
       <section>
-        <h2>Testing for SRM</h2>
+        <h2 id="testing-for-srm">Testing for SRM</h2>
 
         <h3 className="text-lg font-semibold mt-4 mb-2">Chi-Square Goodness-of-Fit Test</h3>
         <p>
@@ -207,7 +207,7 @@ export default function L4() {
           6. SRM Causes
           ========================================================= */}
       <section>
-        <h2>Common Causes of SRM</h2>
+        <h2 id="common-causes-of-srm">Common Causes of SRM</h2>
         <p>
           When SRM is detected, you need to diagnose the root cause. The four most common categories are:
         </p>
@@ -245,7 +245,7 @@ export default function L4() {
           7. A/A Tests
           ========================================================= */}
       <section>
-        <h2>A/A Tests</h2>
+        <h2 id="aa-tests">A/A Tests</h2>
         <p>
           An A/A test splits users into two (or more) groups, but <strong>all groups receive
           the same treatment</strong> (or no treatment at all). Since there is no real difference,
@@ -297,7 +297,7 @@ export default function L4() {
           8. Using A/A Tests for Sample Size
           ========================================================= */}
       <section>
-        <h2>Using A/A Tests for Sample Size Estimation</h2>
+        <h2 id="using-aa-tests-for-sample-size-estimation">Using A/A Tests for Sample Size Estimation</h2>
         <p>
           One of the most practical uses of an A/A test is estimating the variance of your{' '}
           <ConceptLink conceptId="oec">OEC</ConceptLink> under the null. Here is the workflow:
@@ -328,7 +328,7 @@ export default function L4() {
           9. SUTVA
           ========================================================= */}
       <section>
-        <h2>SUTVA — Stable Unit Treatment Value Assumption</h2>
+        <h2 id="sutva">SUTVA — Stable Unit Treatment Value Assumption</h2>
         <p>
           The <ConceptLink conceptId="sutva">Stable Unit Treatment Value Assumption</ConceptLink> states
           that the outcome for any user depends <strong>only on their own treatment assignment</strong>,
@@ -377,7 +377,7 @@ export default function L4() {
           10. Survivorship Bias
           ========================================================= */}
       <section>
-        <h2>Survivorship Bias</h2>
+        <h2 id="survivorship-bias">Survivorship Bias</h2>
         <p>
           Survivorship bias occurs when only a subset of users actually <em>adopt</em> the
           treatment, and you mistakenly analyze only those adopters. The problem is self-selection:
@@ -415,7 +415,7 @@ export default function L4() {
           11. Heterogeneous Treatment Effects (HTE)
           ========================================================= */}
       <section>
-        <h2>Heterogeneous Treatment Effects (HTE)</h2>
+        <h2 id="heterogeneous-treatment-effects">Heterogeneous Treatment Effects (HTE)</h2>
         <p>
           The average treatment effect (ATE) hides variation. Different user segments may respond
           differently to the treatment. The Conditional Average Treatment Effect (CATE) captures
@@ -459,7 +459,7 @@ export default function L4() {
           12. Comparing CATEs
           ========================================================= */}
       <section>
-        <h2>Comparing CATEs Across Segments</h2>
+        <h2 id="comparing-cates-across-segments">Comparing CATEs Across Segments</h2>
         <p>
           Once you estimate treatment effects for different segments, the natural question is:
           are they <em>significantly</em> different from each other?
@@ -494,7 +494,7 @@ export default function L4() {
           13. OLS for Treatment Effects
           ========================================================= */}
       <section>
-        <h2>OLS for Treatment Effects</h2>
+        <h2 id="ols-for-treatment-effects">OLS for Treatment Effects</h2>
         <p>
           The simplest regression framework for A/B testing is:
         </p>
@@ -525,7 +525,7 @@ export default function L4() {
           14. Interaction Effects
           ========================================================= */}
       <section>
-        <h2>Interaction Effects</h2>
+        <h2 id="interaction-effects">Interaction Effects</h2>
         <p>
           To formally test whether treatment effects differ across groups (e.g., male vs female),
           include an interaction term:
@@ -559,7 +559,7 @@ export default function L4() {
           15. Novelty Effects
           ========================================================= */}
       <section>
-        <h2>Novelty Effects</h2>
+        <h2 id="novelty-effects">Novelty Effects</h2>
         <p>
           A <strong>novelty effect</strong> occurs when the treatment produces an initial boost in
           engagement simply because it is new and different — not because it is genuinely better.
@@ -583,7 +583,7 @@ export default function L4() {
           16. Primacy Effects
           ========================================================= */}
       <section>
-        <h2>Primacy Effects</h2>
+        <h2 id="primacy-effects">Primacy Effects</h2>
         <p>
           A <strong>primacy effect</strong> is the opposite of a novelty effect: the treatment
           effect <em>increases</em> over time. This happens when:
@@ -616,17 +616,34 @@ export default function L4() {
       </section>
 
       {/* =========================================================
+          Review Questions
+          ========================================================= */}
+      <section>
+        <h2 id="review-questions">Review Questions</h2>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>What is the difference between internal validity and external validity? Why is internal validity a prerequisite?</li>
+          <li>What is Sample Ratio Mismatch, and why should it be the first thing you check in any experiment?</li>
+          <li>Name four common causes of SRM and explain how each one creates unequal group sizes.</li>
+          <li>What are the four use cases for A/A tests?</li>
+          <li>What is SUTVA, and give an example of how it can be violated in a social network experiment.</li>
+          <li>Explain survivorship bias in the context of a mobile app experiment where users must update to see the treatment.</li>
+          <li>How do you formally test whether two subgroup treatment effects (CATEs) are significantly different from each other?</li>
+          <li>What is the difference between novelty effects and primacy effects, and how do you detect each?</li>
+        </ol>
+      </section>
+
+      {/* =========================================================
           Exercises
           ========================================================= */}
       <section>
-        <h2>Exercises</h2>
+        <h2 id="exercises">Exercises</h2>
 
         <div className="space-y-8 my-6">
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-5">
             <h4 className="font-semibold text-gray-900 mb-3">Problem 1: SRM Detection via t-test</h4>
             <p className="text-gray-700">
-              An experiment uses an 80/20 split (80% treatment, 20% control). After one week you
-              observe: Control = 20,041 users, Treatment = 80,159 users (total = 100,200). The
+              An experiment uses an <code>80</code>/<code>20</code> split (80% treatment, 20% control). After one week you
+              observe: Control = <code>20,041</code> users, Treatment = <code>80,159</code> users (total = <code>100,200</code>). The
               expected treatment proportion is <MathBlock tex="p = 0.80" />.
             </p>
             <p className="text-gray-700 mt-2">
@@ -641,15 +658,15 @@ export default function L4() {
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-5">
             <h4 className="font-semibold text-gray-900 mb-3">Problem 2: Chi-Square SRM Test (3 groups)</h4>
             <p className="text-gray-700">
-              A three-group experiment has expected proportions 10% / 10% / 80% (Treatment 1 /
-              Treatment 2 / Control). After running, you observe: Treatment 1 = 10,800,
-              Treatment 2 = 10,570, Control = 86,000 (total = 107,370).
+              A three-group experiment has expected proportions <code>10%</code> / <code>10%</code> / <code>80%</code> (Treatment 1 /
+              Treatment 2 / Control). After running, you observe: Treatment 1 = <code>10,800</code>,
+              Treatment 2 = <code>10,570</code>, Control = <code>86,000</code> (total = <code>107,370</code>).
             </p>
             <p className="text-gray-700 mt-2">
               (a) Compute the expected counts for each group.<br/>
-              (b) Compute the chi-square test statistic.<br/>
+              (b) Compute the <MathBlock tex="\chi^2" /> test statistic.<br/>
               (c) State the degrees of freedom and determine whether SRM is present at the
-              0.001 significance level.<br/>
+              <code>0.001</code> significance level.<br/>
               (d) Which group(s) appear to be contributing most to the mismatch?
             </p>
           </div>
@@ -658,17 +675,17 @@ export default function L4() {
             <h4 className="font-semibold text-gray-900 mb-3">Problem 3: A/A Test for Sample Size</h4>
             <p className="text-gray-700">
               You want to run an experiment where the OEC is ad clicks per user. Historical data
-              suggests the baseline click rate is approximately 3% (i.e., mean = 0.03 clicks per
-              impression). You want to detect a 5% relative increase (i.e., from 3.0% to 3.15%).
+              suggests the baseline click rate is approximately <code>3%</code> (i.e., mean = <code>0.03</code> clicks per
+              impression). You want to detect a <code>5%</code> relative increase (i.e., from <code>3.0%</code> to <code>3.15%</code>).
             </p>
             <p className="text-gray-700 mt-2">
               (a) Design an A/A test to estimate <MathBlock tex="\sigma^2" /> for this metric.
               What would you measure and how long would you run it?<br/>
               (b) Suppose the A/A test yields <MathBlock tex="\hat{\sigma}^2 = 0.029" /> (variance
               of clicks per user). Compute the minimum sample size per group needed to detect a
-              5% relative increase with 80% power at <MathBlock tex="\alpha = 0.05" />.<br/>
-              (c) If your platform has 500,000 daily active users, how many days would you need
-              to run the experiment (assuming 50/50 split)?
+              <code>5%</code> relative increase with 80% power at <MathBlock tex="\alpha = 5\%" />.<br/>
+              (c) If your platform has <code>500,000</code> daily active users, how many days would you need
+              to run the experiment (assuming <code>50</code>/<code>50</code> split)?
             </p>
           </div>
 
@@ -677,10 +694,10 @@ export default function L4() {
             <p className="text-gray-700">
               WeChat is testing a larger font size in its "Moments" feed. However, users must
               update to the latest app version to see the change. During the two-week experiment,
-              only 60% of treatment-group users actually update their app.
+              only <code>60%</code> of treatment-group users actually update their app.
             </p>
             <p className="text-gray-700 mt-2">
-              (a) Explain why comparing only the 60% of treatment users who updated to all control
+              (a) Explain why comparing only the <code>60%</code> of treatment users who updated to all control
               users would produce a biased estimate of the treatment effect. What direction would
               you expect the bias to go, and why?<br/>
               (b) What would an Intention-to-Treat (ITT) analysis measure in this context? Write
@@ -695,8 +712,8 @@ export default function L4() {
               An experiment measuring engagement shows the following segment-level results:
             </p>
             <ul className="list-disc list-inside my-2 text-gray-700 ml-4">
-              <li>Users aged 18-25: treatment effect = +5%, 95% CI = [3%, 7%]</li>
-              <li>Users aged 25-40: treatment effect = +2%, 95% CI = [0.5%, 3.5%]</li>
+              <li>Users aged 18-25: treatment effect = <code>+5%</code>, 95% CI = [<code>3%</code>, <code>7%</code>]</li>
+              <li>Users aged 25-40: treatment effect = <code>+2%</code>, 95% CI = [<code>0.5%</code>, <code>3.5%</code>]</li>
             </ul>
             <p className="text-gray-700 mt-2">
               (a) Using the rule of thumb (non-overlapping CIs), can you conclude that the two

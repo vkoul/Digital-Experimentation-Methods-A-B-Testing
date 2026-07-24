@@ -7,7 +7,7 @@ export default function L5() {
     <ChapterLayout title="Improving Sensitivity I" subtitle="Lecture 5 — Getting more signal from your data">
 
       <section className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
-        <h2 className="text-blue-900">Learning Objectives</h2>
+        <h2 id="learning-objectives" className="text-blue-900">Learning Objectives</h2>
         <p className="text-blue-800 mb-2">By the end of this chapter, you will be able to:</p>
         <ul className="list-disc pl-6 space-y-1 text-blue-800">
           <li>Explain how variance flows through the chain of key statistics (SE → t → p → CI → power → sample size)</li>
@@ -24,7 +24,7 @@ export default function L5() {
           1. Variance and Key Statistics
           ============================================================ */}
       <section>
-        <h2>Variance and the Chain of Key Statistics</h2>
+        <h2 id="variance-and-key-statistics">Variance and the Chain of Key Statistics</h2>
         <p>
           The population variance <MathBlock tex="\sigma^2" /> of your metric sits at the root of every
           number that matters in an experiment. It flows into the{' '}
@@ -55,7 +55,7 @@ export default function L5() {
           2. Standard Error Derivation
           ============================================================ */}
       <section>
-        <h2>Deriving the Standard Error of a Difference in Means</h2>
+        <h2 id="deriving-standard-error">Deriving the Standard Error of a Difference in Means</h2>
         <p>
           When we compare treatment mean <MathBlock tex="\bar{Y}_1" /> against control mean{' '}
           <MathBlock tex="\bar{Y}_0" />, the treatment effect is{' '}
@@ -92,7 +92,7 @@ export default function L5() {
           3. Correlated Observations
           ============================================================ */}
       <section>
-        <h2>Correlated Observations</h2>
+        <h2 id="correlated-observations">Correlated Observations</h2>
         <p>
           Real experimental data often contains dependencies that violate the independence assumption.
           Ignoring these correlations underestimates the true variance (and thus the SE), inflating
@@ -135,7 +135,7 @@ export default function L5() {
           4. The Classic Problem
           ============================================================ */}
       <section>
-        <h2>The Classic Problem: Clicks per Page View</h2>
+        <h2 id="classic-problem-clicks-per-page-view">The Classic Problem: Clicks per Page View</h2>
         <p>
           Suppose your <ConceptLink conceptId="oec">OEC</ConceptLink> is clicks per page view.
           How you handle the standard error depends on the{' '}
@@ -164,7 +164,7 @@ export default function L5() {
           5. Ratio Metrics (Case 1)
           ============================================================ */}
       <section>
-        <h2>Ratio Metrics (Case 1: Randomization Unit = User)</h2>
+        <h2 id="ratio-metrics-case-1">Ratio Metrics (Case 1: Randomization Unit = User)</h2>
         <p>
           When the randomization unit is the user, all page views from a given user are in the same
           group. We define the ratio metric:
@@ -192,7 +192,7 @@ export default function L5() {
           6. Delta Method for Ratio Metrics
           ============================================================ */}
       <section>
-        <h2>Delta Method for Ratio Metrics</h2>
+        <h2 id="delta-method-ratio-metrics">Delta Method for Ratio Metrics</h2>
         <p>
           The <ConceptLink conceptId="delta-method">delta method</ConceptLink> gives us the variance
           of a smooth function of random variables using a first-order Taylor approximation. For the
@@ -220,7 +220,7 @@ export default function L5() {
           7. Comparing Two Ratio Metrics
           ============================================================ */}
       <section>
-        <h2>Comparing Two Ratio Metrics</h2>
+        <h2 id="comparing-two-ratio-metrics">Comparing Two Ratio Metrics</h2>
         <p>
           To test whether the treatment changed clicks/page-view, compute the ratio metric for each group:
         </p>
@@ -242,7 +242,7 @@ export default function L5() {
           8. Variance of Lift
           ============================================================ */}
       <section>
-        <h2>Variance of the Percentage Lift</h2>
+        <h2 id="variance-of-percentage-lift">Variance of the Percentage Lift</h2>
         <p>
           Industry often reports results as a percentage lift over control:
         </p>
@@ -269,7 +269,7 @@ export default function L5() {
           9. Clustered Standard Errors (Case 2)
           ============================================================ */}
       <section>
-        <h2>Clustered Standard Errors (Case 2: Randomization Unit = Page View)</h2>
+        <h2 id="clustered-standard-errors-case-2">Clustered Standard Errors (Case 2: Randomization Unit = Page View)</h2>
         <p>
           When randomization happens at the page-view level, a single user may have page views in
           <em> both</em> treatment and control. You cannot aggregate to the user level as in Case 1,
@@ -287,7 +287,7 @@ export default function L5() {
           10. OLS Equivalence
           ============================================================ */}
       <section>
-        <h2>OLS Equivalence to the Two-Sample t-Test</h2>
+        <h2 id="ols-equivalence-t-test">OLS Equivalence to the Two-Sample t-Test</h2>
         <p>
           Consider the linear regression:
         </p>
@@ -310,7 +310,7 @@ export default function L5() {
           11. Two Corrections
           ============================================================ */}
       <section>
-        <h2>What Clustered SE Corrects</h2>
+        <h2 id="what-clustered-se-corrects">What Clustered SE Corrects</h2>
         <p>
           Clustered standard errors address two simultaneous problems:
         </p>
@@ -337,7 +337,7 @@ export default function L5() {
           12. Effects of Clustered SE
           ============================================================ */}
       <section>
-        <h2>Effects of Applying Clustered Standard Errors</h2>
+        <h2 id="effects-of-clustered-standard-errors">Effects of Applying Clustered Standard Errors</h2>
         <p>
           Applying the clustered correction changes inference but <strong>not the point estimate</strong>:
         </p>
@@ -372,7 +372,7 @@ export default function L5() {
           13. Three-Strategy Framework
           ============================================================ */}
       <section>
-        <h2>Three-Strategy Framework for Improving Sensitivity</h2>
+        <h2 id="three-strategy-framework">Three-Strategy Framework for Improving Sensitivity</h2>
         <p>
           We now have the tools to see how sensitivity can be improved systematically. Every approach
           falls into one of three buckets:
@@ -405,7 +405,7 @@ export default function L5() {
           14. Reduce Variance: Transform Metrics
           ============================================================ */}
       <section>
-        <h2>Strategy 1a: Transform Metrics to Reduce Variance</h2>
+        <h2 id="strategy-1a-transform-metrics">Strategy 1a: Transform Metrics to Reduce Variance</h2>
         <p>
           Count metrics often have high variance because of heavy-tailed users. A powerful technique
           is to replace a count metric with a binary (indicator) version. Examples:
@@ -438,7 +438,7 @@ export default function L5() {
           15. Paired Design / Interleaving
           ============================================================ */}
       <section>
-        <h2>Strategy 1b: Paired Design and Interleaving</h2>
+        <h2 id="strategy-1b-paired-design-interleaving">Strategy 1b: Paired Design and Interleaving</h2>
         <p>
           The most dramatic variance reduction comes from <strong>within-subject</strong> comparisons.
           Instead of comparing different users across groups, show the <em>same user</em> both
@@ -464,7 +464,7 @@ export default function L5() {
           16. Interleaving Numerical Comparison
           ============================================================ */}
       <section>
-        <h2>Interleaving: A Numerical Comparison</h2>
+        <h2 id="interleaving-numerical-comparison">Interleaving: A Numerical Comparison</h2>
         <p>
           Consider 14 users with viewing hours under algorithms A and B. In a standard A/B test,
           7 users see only A and 7 see only B. The between-user variance is enormous: some users
@@ -494,7 +494,7 @@ export default function L5() {
           17. Same-Results Problem
           ============================================================ */}
       <section>
-        <h2>The Same-Results Problem in Interleaving</h2>
+        <h2 id="same-results-problem">The Same-Results Problem in Interleaving</h2>
         <p>
           A practical challenge arises when both algorithms recommend the same items. If A's top
           result is identical to B's top result, there is no way to attribute a user's engagement
@@ -513,7 +513,7 @@ export default function L5() {
           18. Balanced Interleaving
           ============================================================ */}
       <section>
-        <h2>Balanced Interleaving</h2>
+        <h2 id="balanced-interleaving">Balanced Interleaving</h2>
         <p>
           In balanced interleaving, for each user (unit), we randomly decide which algorithm goes
           first in each round of selection. Specifically:
@@ -534,7 +534,7 @@ export default function L5() {
           19. Team-Draft Interleaving
           ============================================================ */}
       <section>
-        <h2>Team-Draft Interleaving</h2>
+        <h2 id="team-draft-interleaving">Team-Draft Interleaving</h2>
         <p>
           Team-draft interleaving is a finer-grained approach that randomizes at the <strong>document
           pair</strong> level rather than the user level:
@@ -556,7 +556,7 @@ export default function L5() {
           20. Increase Sample Size: Finer Randomization
           ============================================================ */}
       <section>
-        <h2>Strategy 2a: Finer Randomization Units</h2>
+        <h2 id="strategy-2a-finer-randomization-units">Strategy 2a: Finer Randomization Units</h2>
         <p>
           Recall that <MathBlock tex="\text{Var}(\bar{Y}) = \frac{1}{n}\text{Var}(Y)" />. A more
           granular randomization unit (page view instead of user, query instead of session) gives
@@ -591,7 +591,7 @@ export default function L5() {
           21. Pooled Control Groups
           ============================================================ */}
       <section>
-        <h2>Strategy 2b: Pooled Control Groups</h2>
+        <h2 id="strategy-2b-pooled-control-groups">Strategy 2b: Pooled Control Groups</h2>
         <p>
           When running multiple experiments simultaneously, you can share a single large control group
           across all experiments instead of maintaining separate controls for each. This increases
@@ -615,7 +615,7 @@ export default function L5() {
           22. Optimal Traffic Split
           ============================================================ */}
       <section>
-        <h2>Strategy 2c: Optimal Traffic Split</h2>
+        <h2 id="strategy-2c-optimal-traffic-split">Strategy 2c: Optimal Traffic Split</h2>
         <p>
           For a fixed total sample size <MathBlock tex="N = n_1 + n_0" />, the variance of the
           treatment effect is:
@@ -640,7 +640,7 @@ export default function L5() {
           23. Trigger Experiments Detailed
           ============================================================ */}
       <section>
-        <h2>Strategy 3: Triggered Experiments</h2>
+        <h2 id="strategy-3-triggered-experiments">Strategy 3: Triggered Experiments</h2>
         <p>
           A <ConceptLink conceptId="triggered-experiment">triggered experiment</ConceptLink> restricts
           analysis to users who actually encountered the feature change. Users who never reached the
@@ -680,7 +680,7 @@ export default function L5() {
           24. Four Triggering Examples
           ============================================================ */}
       <section>
-        <h2>Four Types of Triggering</h2>
+        <h2 id="four-types-of-triggering">Four Types of Triggering</h2>
         <ol>
           <li>
             <strong>Intentional partial exposure.</strong> You deliberately target specific user segments
@@ -714,7 +714,7 @@ export default function L5() {
           25. Counterfactual Logging Performance
           ============================================================ */}
       <section>
-        <h2>Counterfactual Logging: Performance Considerations</h2>
+        <h2 id="counterfactual-logging-performance">Counterfactual Logging: Performance Considerations</h2>
         <p>
           Counterfactual triggering requires running both models for every user to determine whether
           their recommendations differ. This means:
@@ -752,7 +752,7 @@ export default function L5() {
           26. Triggered vs Overall Treatment Effects
           ============================================================ */}
       <section>
-        <h2>Triggered vs. Overall Treatment Effects (Dilution)</h2>
+        <h2 id="triggered-vs-overall-treatment-effects">Triggered vs. Overall Treatment Effects (Dilution)</h2>
         <p>
           The triggered treatment effect applies only to the triggered subset. To report the overall
           effect for all users, you must account for <strong>dilution</strong> — the triggered effect
@@ -790,10 +790,27 @@ export default function L5() {
       </section>
 
       {/* ============================================================
+          Review Questions
+          ============================================================ */}
+      <section>
+        <h2 id="review-questions">Review Questions</h2>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Trace the chain from population variance to required sample size. How does reducing σ² affect each link?</li>
+          <li>Why can't you simply compute per-user ratios and average them when the OEC is clicks/pageview?</li>
+          <li>What does the delta method approximate, and when is it needed?</li>
+          <li>What happens to your Type I error rate if you ignore clustering (use naive OLS instead of clustered SE)?</li>
+          <li>Name the three strategies for improving sensitivity and give one technique for each.</li>
+          <li>Why is interleaving more sensitive than a standard A/B test for ranking algorithms?</li>
+          <li>What is a triggered experiment, and what constraint must the trigger condition satisfy to avoid bias?</li>
+          <li>Explain why triggered treatment effects can be much larger than overall treatment effects (dilution).</li>
+        </ol>
+      </section>
+
+      {/* ============================================================
           Exercises
           ============================================================ */}
       <section>
-        <h2>Exercises</h2>
+        <h2 id="exercises">Exercises</h2>
 
         <h3>Exercise 1: Delta Method for Ratio Metrics</h3>
         <p>
@@ -814,8 +831,8 @@ export default function L5() {
 
         <h3>Exercise 2: Clustered Standard Errors</h3>
         <p>
-          An experiment randomizes at the page-view level. You have 1,000,000 page views from 50,000
-          unique users (so ~20 page views per user on average). You run a naive OLS regression of
+          An experiment randomizes at the page-view level. You have <code>1,000,000</code> page views from <code>50,000</code>{' '}
+          unique users (so ~<code>20</code> page views per user on average). You run a naive OLS regression of
           the outcome on the treatment indicator without clustering.
         </p>
         <p>
@@ -830,35 +847,35 @@ export default function L5() {
           Netflix tests two recommendation algorithms (A and B).
         </p>
         <ul>
-          <li>In a standard A/B test with <MathBlock tex="n = 1000" /> per group, the estimated lift for B is +2% viewing hours, with <MathBlock tex="p = 0.15" />.</li>
-          <li>Using interleaving with only <MathBlock tex="n = 200" /> total users, algorithm B's recommendations account for 53% of viewed hours vs. 47% for A, with <MathBlock tex="p = 0.01" />.</li>
+          <li>In a standard A/B test with <MathBlock tex="n = 1000" /> per group, the estimated lift for B is +<code>2%</code> viewing hours, with <MathBlock tex="p = 0.15" />.</li>
+          <li>Using interleaving with only <MathBlock tex="n = 200" /> total users, algorithm B's recommendations account for <code>53%</code> of viewed hours vs. <code>47%</code> for A, with <MathBlock tex="p = 0.01" />.</li>
         </ul>
         <p>
           (a) Explain the source of variance in the A/B test that makes it insensitive.<br />
           (b) Explain what interleaving removes and why this leads to a smaller SE.<br />
-          (c) Despite having 10x fewer users, the interleaved test is significant while the A/B test is not. Explain why sample size alone does not determine power.
+          (c) Despite having <code>10x</code> fewer users, the interleaved test is significant while the A/B test is not. Explain why sample size alone does not determine power.
         </p>
 
         <h3>Exercise 4: Trigger Conditions</h3>
         <p>
-          You are testing a change to the free shipping threshold from $50 to $35.
+          You are testing a change to the free shipping threshold from <code>$50</code> to <code>$35</code>.
         </p>
         <p>
           (a) Define the trigger condition precisely.<br />
-          (b) A user has cart value $40 at some point during their session, which would trigger them. They then return an item worth $10, bringing their net cart value to $30. Should this user be considered "triggered"? Explain your reasoning carefully, considering the intent-to-treat principle.<br />
+          (b) A user has cart value <code>$40</code> at some point during their session, which would trigger them. They then return an item worth <code>$10</code>, bringing their net cart value to <code>$30</code>. Should this user be considered "triggered"? Explain your reasoning carefully, considering the intent-to-treat principle.<br />
           (c) What is the danger of defining the trigger based on behavior that occurs <em>after</em> treatment assignment?
         </p>
 
         <h3>Exercise 5: Triggered Treatment Effect and Dilution</h3>
         <p>
-          A triggered experiment on a checkout redesign shows a +8% increase in conversion rate for
-          triggered users (those who reach the checkout page). Triggered users represent 15% of all
-          visitors. Assume that untriggered users have a baseline conversion of 0% (they never reach
+          A triggered experiment on a checkout redesign shows a +<code>8%</code> increase in conversion rate for
+          triggered users (those who reach the checkout page). Triggered users represent <code>15%</code> of all
+          visitors. Assume that untriggered users have a baseline conversion of <code>0%</code> (they never reach
           checkout, so they cannot convert via this path).
         </p>
         <p>
           (a) What is the overall treatment effect (on all visitors) implied by the triggered result?<br />
-          (b) If the baseline conversion rate for triggered users is 40%, what is the absolute increase in conversion for triggered users?<br />
+          (b) If the baseline conversion rate for triggered users is <code>40%</code>, what is the absolute increase in conversion for triggered users?<br />
           (c) What is the absolute increase in the site-wide conversion rate?<br />
           (d) If you ran this experiment without triggering, how much larger would your sample size need to be? (Give a rough factor, using the ratio of required n with and without triggering.)
         </p>
