@@ -74,20 +74,20 @@ export default function Intro() {
       <section>
         <h2>Course Team</h2>
         <div className="space-y-3">
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-            <p className="font-semibold text-gray-900">Course Instructor</p>
-            <p className="text-gray-700">
+          <div className="bg-gray-50 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+            <p className="font-semibold text-gray-900 dark:text-gray-100">👨‍🏫 Course Instructor</p>
+            <p className="text-gray-700 dark:text-gray-300">
               Shan Huang, Assistant Professor in Marketing at HKU Business School
             </p>
-            <p className="text-gray-500 text-sm">Email: shanhh@hku.hk</p>
-            <p className="text-gray-500 text-sm">Website: <a href="https://www.shanhhuang.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">shanhhuang.com</a></p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">✉️ Email: shanhh@hku.hk</p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">🌐 Website: <a href="https://www.shanhhuang.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">shanhhuang.com</a></p>
           </div>
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-            <p className="font-semibold text-gray-900">Course TA</p>
-            <p className="text-gray-700">
+          <div className="bg-gray-50 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+            <p className="font-semibold text-gray-900 dark:text-gray-100">🎓 Course TA</p>
+            <p className="text-gray-700 dark:text-gray-300">
               Chen Wang, PhD student at HKU Business School
             </p>
-            <p className="text-gray-500 text-sm">Email: annacwang@connect.hku.hk</p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">✉️ Email: annacwang@connect.hku.hk</p>
           </div>
         </div>
       </section>
