@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply leading-relaxed;
+  }
+
+  h1 { @apply text-3xl font-bold mb-4 text-primary-900; }
+  h2 { @apply text-2xl font-semibold mb-3 mt-8 text-primary-900; }
+  h3 { @apply text-xl font-semibold mb-2 mt-6 text-gray-800; }
+}
+
+@layer components {
+  .concept-link {
+    @apply border-b border-dashed border-blue-400 cursor-help text-blue-700
+           hover:border-solid hover:bg-blue-50 transition-colors duration-150;
+  }
+
+  .concept-link--in-chain {
+    @apply border-b border-solid border-purple-400 text-purple-700 bg-purple-50;
+  }
+
+  .tooltip-surface {
+    @apply bg-tooltip-bg text-white rounded-lg shadow-xl border border-tooltip-border
+           p-4 max-w-sm text-sm leading-relaxed;
+  }
+
+  .tooltip-surface--locked {
+    @apply ring-2 ring-blue-400;
+  }
+
+  .expandable-reading {
+    @apply my-4 border-l-4 border-blue-200 bg-blue-50/50 rounded-r-lg overflow-hidden;
+  }
+}
