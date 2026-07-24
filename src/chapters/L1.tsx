@@ -724,75 +724,87 @@ export default function L1() {
       <section>
         <h2 id="exercises">Exercises</h2>
 
-        <h3>Exercise 1: Amazon Prime Movie Recommendations</h3>
-        <p>
-          You are working on Amazon Prime Video. The team wants to test a new recommendation
-          algorithm for the home screen.
-        </p>
-        <ul>
-          <li>Specify the <ConceptLink conceptId="oec">OEC</ConceptLink> for this experiment.</li>
-          <li>What are the parameters (factors you are manipulating)?</li>
-          <li>What are the conditions/variants?</li>
-          <li>
-            What is the{' '}
-            <ConceptLink conceptId="randomization-unit">randomization unit</ConceptLink>?
-            Justify your choice.
-          </li>
-        </ul>
+        <div className="space-y-6 mt-4">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 1: Amazon Prime Movie Recommendations</p>
+            <p className="text-gray-700 mt-2">
+              You are working on Amazon Prime Video. The team wants to test a new recommendation
+              algorithm for the home screen.
+            </p>
+            <ul className="list-disc pl-5 mt-2 text-gray-700 space-y-1">
+              <li>Specify the <ConceptLink conceptId="oec">OEC</ConceptLink> for this experiment.</li>
+              <li>What are the parameters (factors you are manipulating)?</li>
+              <li>What are the conditions/variants?</li>
+              <li>
+                What is the{' '}
+                <ConceptLink conceptId="randomization-unit">randomization unit</ConceptLink>?
+                Justify your choice.
+              </li>
+            </ul>
+          </div>
 
-        <h3>Exercise 2: Taobao Customer Service Chatbot</h3>
-        <p>
-          Taobao (a major Chinese e-commerce platform) wants to test a new AI chatbot for customer
-          service. The new chatbot uses a large language model and is expected to resolve issues
-          faster than the existing rule-based system.
-        </p>
-        <ul>
-          <li>Specify the <ConceptLink conceptId="oec">OEC</ConceptLink>.</li>
-          <li>What are the parameters and conditions?</li>
-          <li>
-            What should the{' '}
-            <ConceptLink conceptId="randomization-unit">randomization unit</ConceptLink> be: the
-            individual chat session or the user? Discuss the tradeoffs of each choice. Under what
-            circumstances would chat-level randomization be acceptable?
-          </li>
-        </ul>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 2: Taobao Customer Service Chatbot</p>
+            <p className="text-gray-700 mt-2">
+              Taobao (a major Chinese e-commerce platform) wants to test a new AI chatbot for customer
+              service. The new chatbot uses a large language model and is expected to resolve issues
+              faster than the existing rule-based system.
+            </p>
+            <ul className="list-disc pl-5 mt-2 text-gray-700 space-y-1">
+              <li>Specify the <ConceptLink conceptId="oec">OEC</ConceptLink>.</li>
+              <li>What are the parameters and conditions?</li>
+              <li>
+                What should the{' '}
+                <ConceptLink conceptId="randomization-unit">randomization unit</ConceptLink> be: the
+                individual chat session or the user? Discuss the tradeoffs of each choice. Under what
+                circumstances would chat-level randomization be acceptable?
+              </li>
+            </ul>
+          </div>
 
-        <h3>Exercise 3: Bing SERP Truncation</h3>
-        <p>
-          Bing is running an experiment on the search engine results page (SERP): Control shows{' '}
-          <code>10</code> organic results on the first page, Treatment shows only <code>8</code>{' '}
-          results. The <ConceptLink conceptId="oec">OEC</ConceptLink> is{' '}
-          <MathBlock tex="\text{CTR}" /> on the first page of results.
-        </p>
-        <ul>
-          <li>Predict which condition (<code>8</code> results or <code>10</code> results) will have
-            a higher CTR.</li>
-          <li>Explain your reasoning carefully. Consider what happens to user behavior when fewer
-            results are shown.</li>
-        </ul>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 3: Bing SERP Truncation</p>
+            <p className="text-gray-700 mt-2">
+              Bing is running an experiment on the search engine results page (SERP): Control shows{' '}
+              <code>10</code> organic results on the first page, Treatment shows only <code>8</code>{' '}
+              results. The <ConceptLink conceptId="oec">OEC</ConceptLink> is{' '}
+              <MathBlock tex="\text{CTR}" /> on the first page of results.
+            </p>
+            <ul className="list-disc pl-5 mt-2 text-gray-700 space-y-1">
+              <li>Predict which condition (<code>8</code> results or <code>10</code> results) will have
+                a higher CTR.</li>
+              <li>Explain your reasoning carefully. Consider what happens to user behavior when fewer
+                results are shown.</li>
+            </ul>
+          </div>
 
-        <h3>Exercise 4: Feature Adoption and Engagement</h3>
-        <p>
-          A company launches a new feature and observes that users who adopted the feature have{' '}
-          <code>40%</code> higher engagement (measured by daily active minutes) than users who did
-          not adopt it.
-        </p>
-        <ul>
-          <li>Can the company conclude that the feature <em>caused</em> higher engagement?</li>
-          <li>Why or why not? Identify at least two specific alternative explanations.</li>
-          <li>What experiment would you propose to establish causality?</li>
-        </ul>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 4: Feature Adoption and Engagement</p>
+            <p className="text-gray-700 mt-2">
+              A company launches a new feature and observes that users who adopted the feature have{' '}
+              <code>40%</code> higher engagement (measured by daily active minutes) than users who did
+              not adopt it.
+            </p>
+            <ul className="list-disc pl-5 mt-2 text-gray-700 space-y-1">
+              <li>Can the company conclude that the feature <em>caused</em> higher engagement?</li>
+              <li>Why or why not? Identify at least two specific alternative explanations.</li>
+              <li>What experiment would you propose to establish causality?</li>
+            </ul>
+          </div>
 
-        <h3>Exercise 5: When Experiments Are Not Feasible</h3>
-        <p>
-          List three specific real-world scenarios where a randomized controlled experiment would
-          not be feasible. For each scenario:
-        </p>
-        <ul>
-          <li>Explain why randomization is impractical or unethical.</li>
-          <li>Suggest an alternative causal inference method and briefly describe how it would be
-            applied.</li>
-        </ul>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 5: When Experiments Are Not Feasible</p>
+            <p className="text-gray-700 mt-2">
+              List three specific real-world scenarios where a randomized controlled experiment would
+              not be feasible. For each scenario:
+            </p>
+            <ul className="list-disc pl-5 mt-2 text-gray-700 space-y-1">
+              <li>Explain why randomization is impractical or unethical.</li>
+              <li>Suggest an alternative causal inference method and briefly describe how it would be
+                applied.</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </ChapterLayout>
   )

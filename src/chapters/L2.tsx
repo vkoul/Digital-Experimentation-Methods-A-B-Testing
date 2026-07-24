@@ -593,102 +593,114 @@ export default function L2() {
       <section>
         <h2 id="exercises">Exercises</h2>
 
-        <h3>Exercise 1: Population and Sample</h3>
-        <p>
-          WeChat is testing an algorithm-based feed ranking against the current chronological ranking for
-          the Moments feature. The experiment runs for <code>30</code> days. The{' '}
-          <ConceptLink conceptId="oec">OEC</ConceptLink> is "number of days with at least one click in the
-          30-day window" (a binomial-type metric). <code>10%</code> of active users are enrolled in the experiment.
-        </p>
-        <p>
-          (a) Define the population for this experiment.
-        </p>
-        <p>
-          (b) Define the sample.
-        </p>
-        <p>
-          (c) Under what conditions can we generalize findings from the sample to the population? What might
-          threaten this generalization?
-        </p>
+        <div className="space-y-6 mt-4">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 1: Population and Sample</p>
+            <p className="text-gray-700 mt-2">
+              WeChat is testing an algorithm-based feed ranking against the current chronological ranking for
+              the Moments feature. The experiment runs for <code>30</code> days. The{' '}
+              <ConceptLink conceptId="oec">OEC</ConceptLink> is "number of days with at least one click in the
+              30-day window" (a binomial-type metric). <code>10%</code> of active users are enrolled in the experiment.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (a) Define the population for this experiment.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (b) Define the sample.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (c) Under what conditions can we generalize findings from the sample to the population? What might
+              threaten this generalization?
+            </p>
+          </div>
 
-        <h3>Exercise 2: Full t-test Calculation</h3>
-        <p>
-          An experiment on a recommendation algorithm yields the following engagement scores (number of
-          interactions per session):
-        </p>
-        <p>
-          <strong>Control (<MathBlock tex="n = 12" />):</strong> 51.4, 52.0, 45.9, 54.3, 50.1, 52.7, 47.8, 49.2, 52.4, 50.3, 53.1, 48.5
-        </p>
-        <p>
-          <strong>Treatment (<MathBlock tex="n = 12" />):</strong> 50.1, 54.2, 55.3, 52.1, 57.4, 53.0, 55.8, 51.3, 54.7, 56.2, 52.9, 53.5
-        </p>
-        <p>
-          (a) Calculate the sample mean for each group.
-        </p>
-        <p>
-          (b) Calculate the sample variance for each group.
-        </p>
-        <p>
-          (c) Calculate the standard error of the difference in means.
-        </p>
-        <p>
-          (d) Calculate the t-statistic.
-        </p>
-        <p>
-          (e) With <MathBlock tex="\text{df} = 22" /> and <MathBlock tex="\alpha = 0.05" /> (two-sided critical value <MathBlock tex="\approx 2.074" />), should you reject the null
-          hypothesis? Interpret the result.
-        </p>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 2: Full t-test Calculation</p>
+            <p className="text-gray-700 mt-2">
+              An experiment on a recommendation algorithm yields the following engagement scores (number of
+              interactions per session):
+            </p>
+            <p className="text-gray-700 mt-2">
+              <strong>Control (<MathBlock tex="n = 12" />):</strong> 51.4, 52.0, 45.9, 54.3, 50.1, 52.7, 47.8, 49.2, 52.4, 50.3, 53.1, 48.5
+            </p>
+            <p className="text-gray-700 mt-2">
+              <strong>Treatment (<MathBlock tex="n = 12" />):</strong> 50.1, 54.2, 55.3, 52.1, 57.4, 53.0, 55.8, 51.3, 54.7, 56.2, 52.9, 53.5
+            </p>
+            <p className="text-gray-700 mt-2">
+              (a) Calculate the sample mean for each group.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (b) Calculate the sample variance for each group.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (c) Calculate the standard error of the difference in means.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (d) Calculate the t-statistic.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (e) With <MathBlock tex="\text{df} = 22" /> and <MathBlock tex="\alpha = 0.05" /> (two-sided critical value <MathBlock tex="\approx 2.074" />), should you reject the null
+              hypothesis? Interpret the result.
+            </p>
+          </div>
 
-        <h3>Exercise 3: Multiple Testing</h3>
-        <p>
-          Before launching an experiment, you run a pre-experiment check (A/A test) comparing <code>42</code> user
-          characteristics between the control and treatment groups to verify randomization quality. You find
-          <code>3</code> characteristics with statistically significant differences at <MathBlock tex="\alpha = 0.05" />.
-        </p>
-        <p>
-          (a) Under the null hypothesis (randomization is correct), how many significant results would you
-          expect by chance?
-        </p>
-        <p>
-          (b) Should you be concerned about <code>3</code> significant results? Why or why not?
-        </p>
-        <p>
-          (c) At what number of significant results (approximately) should you begin to suspect a problem with
-          the randomization? Hint: consider the expected value plus 2 standard deviations, treating the count
-          as <MathBlock tex="\text{Binomial}(42,\; 0.05)" />.
-        </p>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 3: Multiple Testing</p>
+            <p className="text-gray-700 mt-2">
+              Before launching an experiment, you run a pre-experiment check (A/A test) comparing <code>42</code> user
+              characteristics between the control and treatment groups to verify randomization quality. You find
+              <code>3</code> characteristics with statistically significant differences at <MathBlock tex="\alpha = 0.05" />.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (a) Under the null hypothesis (randomization is correct), how many significant results would you
+              expect by chance?
+            </p>
+            <p className="text-gray-700 mt-2">
+              (b) Should you be concerned about <code>3</code> significant results? Why or why not?
+            </p>
+            <p className="text-gray-700 mt-2">
+              (c) At what number of significant results (approximately) should you begin to suspect a problem with
+              the randomization? Hint: consider the expected value plus 2 standard deviations, treating the count
+              as <MathBlock tex="\text{Binomial}(42,\; 0.05)" />.
+            </p>
+          </div>
 
-        <h3>Exercise 4: p-value Interpretation</h3>
-        <p>
-          A colleague runs an A/B test and obtains <MathBlock tex="p = 0.06" />. They state: "The null hypothesis has a 6% chance
-          of being true, so we are almost certain the treatment works."
-        </p>
-        <p>
-          (a) Identify the error in this reasoning.
-        </p>
-        <p>
-          (b) Provide the correct interpretation of <MathBlock tex="p = 0.06" />.
-        </p>
-        <p>
-          (c) What additional information would you need to assess how likely the treatment truly has an effect?
-        </p>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 4: p-value Interpretation</p>
+            <p className="text-gray-700 mt-2">
+              A colleague runs an A/B test and obtains <MathBlock tex="p = 0.06" />. They state: "The null hypothesis has a 6% chance
+              of being true, so we are almost certain the treatment works."
+            </p>
+            <p className="text-gray-700 mt-2">
+              (a) Identify the error in this reasoning.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (b) Provide the correct interpretation of <MathBlock tex="p = 0.06" />.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (c) What additional information would you need to assess how likely the treatment truly has an effect?
+            </p>
+          </div>
 
-        <h3>Exercise 5: z-test vs t-test Convergence</h3>
-        <p>
-          You run an experiment with <MathBlock tex="k = 1000" /> users per group. The metric is a Bernoulli variable (clicked or
-          not) with baseline probability <MathBlock tex="p = 0.5" />. The treatment achieves a lift of <code>1.1</code> (i.e., treatment
-          click rate is <code>0.55</code>).
-        </p>
-        <p>
-          (a) Would you expect the z-test and the t-test to give similar or different results for this
-          experiment? Why?
-        </p>
-        <p>
-          (b) Compute the standard error of the difference in proportions using the known Bernoulli variance formula.
-        </p>
-        <p>
-          (c) Compute the z-statistic and determine whether the result is significant at <MathBlock tex="\alpha = 0.05" />.
-        </p>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 5: z-test vs t-test Convergence</p>
+            <p className="text-gray-700 mt-2">
+              You run an experiment with <MathBlock tex="k = 1000" /> users per group. The metric is a Bernoulli variable (clicked or
+              not) with baseline probability <MathBlock tex="p = 0.5" />. The treatment achieves a lift of <code>1.1</code> (i.e., treatment
+              click rate is <code>0.55</code>).
+            </p>
+            <p className="text-gray-700 mt-2">
+              (a) Would you expect the z-test and the t-test to give similar or different results for this
+              experiment? Why?
+            </p>
+            <p className="text-gray-700 mt-2">
+              (b) Compute the standard error of the difference in proportions using the known Bernoulli variance formula.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (c) Compute the z-statistic and determine whether the result is significant at <MathBlock tex="\alpha = 0.05" />.
+            </p>
+          </div>
+        </div>
       </section>
 
     </ChapterLayout>

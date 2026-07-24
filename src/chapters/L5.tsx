@@ -812,73 +812,85 @@ export default function L5() {
       <section>
         <h2 id="exercises">Exercises</h2>
 
-        <h3>Exercise 1: Delta Method for Ratio Metrics</h3>
-        <p>
-          An experiment measures clicks per page view (OEC) with randomization at the user level.
-          You observe the following statistics:
-        </p>
-        <ul>
-          <li>Treatment: <MathBlock tex="\bar{X}_1 = 2.5" /> clicks/user, <MathBlock tex="\bar{X}_2 = 10" /> page views/user, <MathBlock tex="n_T = 5000" /></li>
-          <li>Control: <MathBlock tex="\bar{X}_1 = 2.3" /> clicks/user, <MathBlock tex="\bar{X}_2 = 9.8" /> page views/user, <MathBlock tex="n_C = 5000" /></li>
-          <li>Within each group: <MathBlock tex="\text{Var}(X_1) = 4" />, <MathBlock tex="\text{Var}(X_2) = 20" />, <MathBlock tex="\text{Cov}(X_1, X_2) = 3" /></li>
-        </ul>
-        <p>
-          (a) Compute the ratio metric <MathBlock tex="m" /> for each group.<br />
-          (b) Using the delta method, compute <MathBlock tex="\text{Var}(m)" /> for each group.<br />
-          (c) Compute the standard error of the difference <MathBlock tex="\hat{\delta} = m_T - m_C" />.<br />
-          (d) Construct a 95% confidence interval for the treatment effect on clicks/page-view.
-        </p>
+        <div className="space-y-6 mt-4">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 1: Delta Method for Ratio Metrics</p>
+            <p className="text-gray-700 mt-2">
+              An experiment measures clicks per page view (OEC) with randomization at the user level.
+              You observe the following statistics:
+            </p>
+            <ul className="mt-2 text-gray-700">
+              <li>Treatment: <MathBlock tex="\bar{X}_1 = 2.5" /> clicks/user, <MathBlock tex="\bar{X}_2 = 10" /> page views/user, <MathBlock tex="n_T = 5000" /></li>
+              <li>Control: <MathBlock tex="\bar{X}_1 = 2.3" /> clicks/user, <MathBlock tex="\bar{X}_2 = 9.8" /> page views/user, <MathBlock tex="n_C = 5000" /></li>
+              <li>Within each group: <MathBlock tex="\text{Var}(X_1) = 4" />, <MathBlock tex="\text{Var}(X_2) = 20" />, <MathBlock tex="\text{Cov}(X_1, X_2) = 3" /></li>
+            </ul>
+            <p className="text-gray-700 mt-2">
+              (a) Compute the ratio metric <MathBlock tex="m" /> for each group.<br />
+              (b) Using the delta method, compute <MathBlock tex="\text{Var}(m)" /> for each group.<br />
+              (c) Compute the standard error of the difference <MathBlock tex="\hat{\delta} = m_T - m_C" />.<br />
+              (d) Construct a 95% confidence interval for the treatment effect on clicks/page-view.
+            </p>
+          </div>
 
-        <h3>Exercise 2: Clustered Standard Errors</h3>
-        <p>
-          An experiment randomizes at the page-view level. You have <code>1,000,000</code> page views from <code>50,000</code>{' '}
-          unique users (so ~<code>20</code> page views per user on average). You run a naive OLS regression of
-          the outcome on the treatment indicator without clustering.
-        </p>
-        <p>
-          (a) Explain why the naive OLS standard errors are incorrect.<br />
-          (b) Would the naive SE be too large or too small? Why?<br />
-          (c) What type of error (Type I or Type II) would you be more likely to commit as a result?<br />
-          (d) What is the appropriate correction?
-        </p>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 2: Clustered Standard Errors</p>
+            <p className="text-gray-700 mt-2">
+              An experiment randomizes at the page-view level. You have <code>1,000,000</code> page views from <code>50,000</code>{' '}
+              unique users (so ~<code>20</code> page views per user on average). You run a naive OLS regression of
+              the outcome on the treatment indicator without clustering.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (a) Explain why the naive OLS standard errors are incorrect.<br />
+              (b) Would the naive SE be too large or too small? Why?<br />
+              (c) What type of error (Type I or Type II) would you be more likely to commit as a result?<br />
+              (d) What is the appropriate correction?
+            </p>
+          </div>
 
-        <h3>Exercise 3: Interleaving vs. A/B Testing</h3>
-        <p>
-          Netflix tests two recommendation algorithms (A and B).
-        </p>
-        <ul>
-          <li>In a standard A/B test with <MathBlock tex="n = 1000" /> per group, the estimated lift for B is +<code>2%</code> viewing hours, with <MathBlock tex="p = 0.15" />.</li>
-          <li>Using interleaving with only <MathBlock tex="n = 200" /> total users, algorithm B's recommendations account for <code>53%</code> of viewed hours vs. <code>47%</code> for A, with <MathBlock tex="p = 0.01" />.</li>
-        </ul>
-        <p>
-          (a) Explain the source of variance in the A/B test that makes it insensitive.<br />
-          (b) Explain what interleaving removes and why this leads to a smaller SE.<br />
-          (c) Despite having <code>10x</code> fewer users, the interleaved test is significant while the A/B test is not. Explain why sample size alone does not determine power.
-        </p>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 3: Interleaving vs. A/B Testing</p>
+            <p className="text-gray-700 mt-2">
+              Netflix tests two recommendation algorithms (A and B).
+            </p>
+            <ul className="mt-2 text-gray-700">
+              <li>In a standard A/B test with <MathBlock tex="n = 1000" /> per group, the estimated lift for B is +<code>2%</code> viewing hours, with <MathBlock tex="p = 0.15" />.</li>
+              <li>Using interleaving with only <MathBlock tex="n = 200" /> total users, algorithm B's recommendations account for <code>53%</code> of viewed hours vs. <code>47%</code> for A, with <MathBlock tex="p = 0.01" />.</li>
+            </ul>
+            <p className="text-gray-700 mt-2">
+              (a) Explain the source of variance in the A/B test that makes it insensitive.<br />
+              (b) Explain what interleaving removes and why this leads to a smaller SE.<br />
+              (c) Despite having <code>10x</code> fewer users, the interleaved test is significant while the A/B test is not. Explain why sample size alone does not determine power.
+            </p>
+          </div>
 
-        <h3>Exercise 4: Trigger Conditions</h3>
-        <p>
-          You are testing a change to the free shipping threshold from <code>$50</code> to <code>$35</code>.
-        </p>
-        <p>
-          (a) Define the trigger condition precisely.<br />
-          (b) A user has cart value <code>$40</code> at some point during their session, which would trigger them. They then return an item worth <code>$10</code>, bringing their net cart value to <code>$30</code>. Should this user be considered "triggered"? Explain your reasoning carefully, considering the intent-to-treat principle.<br />
-          (c) What is the danger of defining the trigger based on behavior that occurs <em>after</em> treatment assignment?
-        </p>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 4: Trigger Conditions</p>
+            <p className="text-gray-700 mt-2">
+              You are testing a change to the free shipping threshold from <code>$50</code> to <code>$35</code>.
+            </p>
+            <p className="text-gray-700 mt-2">
+              (a) Define the trigger condition precisely.<br />
+              (b) A user has cart value <code>$40</code> at some point during their session, which would trigger them. They then return an item worth <code>$10</code>, bringing their net cart value to <code>$30</code>. Should this user be considered "triggered"? Explain your reasoning carefully, considering the intent-to-treat principle.<br />
+              (c) What is the danger of defining the trigger based on behavior that occurs <em>after</em> treatment assignment?
+            </p>
+          </div>
 
-        <h3>Exercise 5: Triggered Treatment Effect and Dilution</h3>
-        <p>
-          A triggered experiment on a checkout redesign shows a +<code>8%</code> increase in conversion rate for
-          triggered users (those who reach the checkout page). Triggered users represent <code>15%</code> of all
-          visitors. Assume that untriggered users have a baseline conversion of <code>0%</code> (they never reach
-          checkout, so they cannot convert via this path).
-        </p>
-        <p>
-          (a) What is the overall treatment effect (on all visitors) implied by the triggered result?<br />
-          (b) If the baseline conversion rate for triggered users is <code>40%</code>, what is the absolute increase in conversion for triggered users?<br />
-          (c) What is the absolute increase in the site-wide conversion rate?<br />
-          (d) If you ran this experiment without triggering, how much larger would your sample size need to be? (Give a rough factor, using the ratio of required n with and without triggering.)
-        </p>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 5: Triggered Treatment Effect and Dilution</p>
+            <p className="text-gray-700 mt-2">
+              A triggered experiment on a checkout redesign shows a +<code>8%</code> increase in conversion rate for
+              triggered users (those who reach the checkout page). Triggered users represent <code>15%</code> of all
+              visitors. Assume that untriggered users have a baseline conversion of <code>0%</code> (they never reach
+              checkout, so they cannot convert via this path).
+            </p>
+            <p className="text-gray-700 mt-2">
+              (a) What is the overall treatment effect (on all visitors) implied by the triggered result?<br />
+              (b) If the baseline conversion rate for triggered users is <code>40%</code>, what is the absolute increase in conversion for triggered users?<br />
+              (c) What is the absolute increase in the site-wide conversion rate?<br />
+              (d) If you ran this experiment without triggering, how much larger would your sample size need to be? (Give a rough factor, using the ratio of required n with and without triggering.)
+            </p>
+          </div>
+        </div>
       </section>
     </ChapterLayout>
   )

@@ -619,86 +619,98 @@ export default function L3() {
       <section>
         <h2 id="exercises">Exercises</h2>
 
-        <h3>Exercise 1: Confidence Interval Calculations</h3>
-        <p>
-          Consider the WeChat Moments experiment where the outcome is binary (engaged/not engaged)
-          with an observed <MathBlock tex="\text{lift} = 1.1" /> percentage points, baseline proportion <MathBlock tex="p = 0.5" />, and <MathBlock tex="n = 1000" /> users per group.
-        </p>
-        <ol>
-          <li>Calculate the 95% confidence interval using the t-distribution (df = n{'₁'} + n{'₂'} - 2).</li>
-          <li>Calculate the 95% confidence interval using the z-approximation (1.96).</li>
-          <li>Compare the widths of the two intervals. How large is the practical difference?</li>
-          <li>Recompute the z-based 95% CI for sample sizes n = <code>100</code>, <code>1000</code>, <code>2000</code>, and <code>5000</code> per group.
-            How does the CI width change? At what point does the interval exclude zero?</li>
-        </ol>
+        <div className="space-y-6 mt-4">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 1: Confidence Interval Calculations</p>
+            <p className="text-gray-700 mt-2">
+              Consider the WeChat Moments experiment where the outcome is binary (engaged/not engaged)
+              with an observed <MathBlock tex="\text{lift} = 1.1" /> percentage points, baseline proportion <MathBlock tex="p = 0.5" />, and <MathBlock tex="n = 1000" /> users per group.
+            </p>
+            <ol className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
+              <li>Calculate the 95% confidence interval using the t-distribution (df = n{'₁'} + n{'₂'} - 2).</li>
+              <li>Calculate the 95% confidence interval using the z-approximation (1.96).</li>
+              <li>Compare the widths of the two intervals. How large is the practical difference?</li>
+              <li>Recompute the z-based 95% CI for sample sizes n = <code>100</code>, <code>1000</code>, <code>2000</code>, and <code>5000</code> per group.
+                How does the CI width change? At what point does the interval exclude zero?</li>
+            </ol>
+          </div>
 
-        <h3>Exercise 2: Checking Randomization with CIs</h3>
-        <p>
-          You are given <code>exp_data.csv</code> containing data from an experiment with 3 groups
-          (control, treatment_A, treatment_B) and 14 user-level covariates (age, gender, tenure,
-          country, device_type, prior_purchases, avg_session_duration, etc.).
-        </p>
-        <ol>
-          <li>For each of the 14 covariates, compute the 95% CI for the difference between each
-            treatment group and control. Present results in a table.</li>
-          <li>Identify which covariates show a statistically significant difference (CI excludes zero)
-            between any group pair.</li>
-          <li>Under correct randomization (no actual differences), how many of the 14 {'×'} 2 = 28
-            comparisons would you <em>expect</em> to be significant at {'α'} = 0.05 due to{' '}
-            <ConceptLink conceptId="type-i-error">Type I error</ConceptLink> alone?</li>
-          <li>Based on your answer, do the observed significant results indicate a randomization
-            problem, or are they consistent with chance?</li>
-        </ol>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 2: Checking Randomization with CIs</p>
+            <p className="text-gray-700 mt-2">
+              You are given <code>exp_data.csv</code> containing data from an experiment with 3 groups
+              (control, treatment_A, treatment_B) and 14 user-level covariates (age, gender, tenure,
+              country, device_type, prior_purchases, avg_session_duration, etc.).
+            </p>
+            <ol className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
+              <li>For each of the 14 covariates, compute the 95% CI for the difference between each
+                treatment group and control. Present results in a table.</li>
+              <li>Identify which covariates show a statistically significant difference (CI excludes zero)
+                between any group pair.</li>
+              <li>Under correct randomization (no actual differences), how many of the 14 {'×'} 2 = 28
+                comparisons would you <em>expect</em> to be significant at {'α'} = 0.05 due to{' '}
+                <ConceptLink conceptId="type-i-error">Type I error</ConceptLink> alone?</li>
+              <li>Based on your answer, do the observed significant results indicate a randomization
+                problem, or are they consistent with chance?</li>
+            </ol>
+          </div>
 
-        <h3>Exercise 3: Skewness and Minimum Sample Size</h3>
-        <p>
-          Using the WeChat dataset, compute the skewness coefficient and the minimum sample size
-          (using the 355s{'²'} rule) for the following metrics:
-        </p>
-        <ol>
-          <li><strong>Friend count</strong> — compute skewness and required n</li>
-          <li><strong>Like count</strong> (number of likes given per day) — compute skewness and required n</li>
-          <li><strong>Comment count</strong> (comments posted per day) — compute skewness and required n</li>
-          <li><strong>Age</strong> — compute skewness and required n</li>
-        </ol>
-        <p>
-          Which metric requires the largest sample size for the CLT to be reliable? Propose a
-          transformation or capping strategy to reduce the required sample size for the most
-          problematic metric.
-        </p>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 3: Skewness and Minimum Sample Size</p>
+            <p className="text-gray-700 mt-2">
+              Using the WeChat dataset, compute the skewness coefficient and the minimum sample size
+              (using the 355s{'²'} rule) for the following metrics:
+            </p>
+            <ol className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
+              <li><strong>Friend count</strong> — compute skewness and required n</li>
+              <li><strong>Like count</strong> (number of likes given per day) — compute skewness and required n</li>
+              <li><strong>Comment count</strong> (comments posted per day) — compute skewness and required n</li>
+              <li><strong>Age</strong> — compute skewness and required n</li>
+            </ol>
+            <p className="text-gray-700 mt-2">
+              Which metric requires the largest sample size for the CLT to be reliable? Propose a
+              transformation or capping strategy to reduce the required sample size for the most
+              problematic metric.
+            </p>
+          </div>
 
-        <h3>Exercise 4: Power Analysis</h3>
-        <p>
-          An experiment measures a continuous outcome with an expected lift of {'δ'} = 1.05 units
-          and population standard deviation {'σ'} = 5.
-        </p>
-        <ol>
-          <li>Using the formula n = 16{'σ'}{'²'}/{'δ'}{'²'}, calculate the minimum sample
-            size per group for 80% power.</li>
-          <li>If you can only afford n = <code>200</code> per group, what is your actual power? (Hint: solve the
-            power formula backwards, or compute the non-centrality parameter and look up power.)</li>
-          <li>If you have n = <code>2000</code> per group, what is your power?</li>
-          <li>At what minimum sample size do you achieve 80% power?</li>
-          <li>Suggest two approaches (other than increasing n) that could improve power for this experiment.</li>
-        </ol>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 4: Power Analysis</p>
+            <p className="text-gray-700 mt-2">
+              An experiment measures a continuous outcome with an expected lift of {'δ'} = 1.05 units
+              and population standard deviation {'σ'} = 5.
+            </p>
+            <ol className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
+              <li>Using the formula n = 16{'σ'}{'²'}/{'δ'}{'²'}, calculate the minimum sample
+                size per group for 80% power.</li>
+              <li>If you can only afford n = <code>200</code> per group, what is your actual power? (Hint: solve the
+                power formula backwards, or compute the non-centrality parameter and look up power.)</li>
+              <li>If you have n = <code>2000</code> per group, what is your power?</li>
+              <li>At what minimum sample size do you achieve 80% power?</li>
+              <li>Suggest two approaches (other than increasing n) that could improve power for this experiment.</li>
+            </ol>
+          </div>
 
-        <h3>Exercise 5: Fisher's Meta-analysis</h3>
-        <p>
-          You have run 10 underpowered experiments testing the hypothesis that a new recommendation
-          algorithm improves click-through rate. The one-sided <MathBlock tex="p" />-values from the 10 experiments are:
-        </p>
-        <p>
-          <code>0.04</code>, <code>0.07</code>, <code>0.50</code>, <code>0.08</code>, <code>0.30</code>, <code>0.05</code>, <code>0.20</code>, <code>0.03</code>, <code>0.05</code>, <code>0.06</code>
-        </p>
-        <ol>
-          <li>Compute -2 ln(p<sub>i</sub>) for each experiment.</li>
-          <li>Sum them to obtain the Fisher test statistic X{'²'}.</li>
-          <li>What distribution does this statistic follow under H{'₀'}? State the degrees of freedom.</li>
-          <li>Look up (or compute) the critical value at {'α'} = 0.05. Can you reject the null?</li>
-          <li>Compute the exact p-value of the combined test statistic using the {'χ'}{'²'}(20) distribution.</li>
-          <li>Discuss: what assumptions must hold for Fisher's method to be valid here? Under what
-            circumstances would combining these p-values be inappropriate?</li>
-        </ol>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Exercise 5: Fisher's Meta-analysis</p>
+            <p className="text-gray-700 mt-2">
+              You have run 10 underpowered experiments testing the hypothesis that a new recommendation
+              algorithm improves click-through rate. The one-sided <MathBlock tex="p" />-values from the 10 experiments are:
+            </p>
+            <p className="text-gray-700 mt-2">
+              <code>0.04</code>, <code>0.07</code>, <code>0.50</code>, <code>0.08</code>, <code>0.30</code>, <code>0.05</code>, <code>0.20</code>, <code>0.03</code>, <code>0.05</code>, <code>0.06</code>
+            </p>
+            <ol className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
+              <li>Compute -2 ln(p<sub>i</sub>) for each experiment.</li>
+              <li>Sum them to obtain the Fisher test statistic X{'²'}.</li>
+              <li>What distribution does this statistic follow under H{'₀'}? State the degrees of freedom.</li>
+              <li>Look up (or compute) the critical value at {'α'} = 0.05. Can you reject the null?</li>
+              <li>Compute the exact p-value of the combined test statistic using the {'χ'}{'²'}(20) distribution.</li>
+              <li>Discuss: what assumptions must hold for Fisher's method to be valid here? Under what
+                circumstances would combining these p-values be inappropriate?</li>
+            </ol>
+          </div>
+        </div>
       </section>
     </ChapterLayout>
   )

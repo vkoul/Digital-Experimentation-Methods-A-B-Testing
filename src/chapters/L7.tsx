@@ -770,111 +770,123 @@ export default function L7() {
       <section>
         <h2 id="exercises">Exercises</h2>
 
-        <h3>Problem 1: App Store Policy Change (DiD)</h3>
-        <p>
-          Apple changes its App Store privacy policy (similar to App Tracking Transparency),
-          affecting all iOS apps. You want to measure the impact of this policy change on
-          WeChat's user engagement metrics (daily active users, session duration, ad revenue).
-        </p>
-        <ol type="a">
-          <li>
-            Why can you not run an A/B test to measure this impact?
-          </li>
-          <li>
-            Design a Difference-in-Differences study to estimate the causal effect of the
-            policy change on WeChat engagement. Specifically:
-            <ul>
-              <li>What is your treatment group?</li>
-              <li>What is your control group?</li>
-              <li>What is the key identifying assumption?</li>
-              <li>What pre-treatment diagnostic would you run to support (or undermine) this assumption?</li>
+        <div className="space-y-6 mt-4">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Problem 1: App Store Policy Change (DiD)</p>
+            <p className="text-gray-700 mt-2">
+              Apple changes its App Store privacy policy (similar to App Tracking Transparency),
+              affecting all iOS apps. You want to measure the impact of this policy change on
+              WeChat's user engagement metrics (daily active users, session duration, ad revenue).
+            </p>
+            <ol type="a" className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
+              <li>
+                Why can you not run an A/B test to measure this impact?
+              </li>
+              <li>
+                Design a Difference-in-Differences study to estimate the causal effect of the
+                policy change on WeChat engagement. Specifically:
+                <ul className="list-disc pl-5 mt-1 space-y-1">
+                  <li>What is your treatment group?</li>
+                  <li>What is your control group?</li>
+                  <li>What is the key identifying assumption?</li>
+                  <li>What pre-treatment diagnostic would you run to support (or undermine) this assumption?</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Problem 2: Seller Badge Effect (RDD)</p>
+            <p className="text-gray-700 mt-2">
+              Taobao gives sellers a "Star Seller" badge when their customer satisfaction score
+              exceeds <code>4.8</code>/<code>5.0</code>. You want to estimate the causal effect of receiving the
+              badge on monthly sales revenue.
+            </p>
+            <ol type="a" className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
+              <li>
+                Design a Regression Discontinuity study. Define: the running variable, the
+                treatment, the control group, and the bandwidth (window) around the cutoff.
+              </li>
+              <li>
+                What is the key assumption that must hold for this design to produce valid
+                causal estimates?
+              </li>
+              <li>
+                Describe a specific scenario that would invalidate this design. How would you
+                test for it?
+              </li>
+            </ol>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Problem 3: TikTok Feature Launch (ITS)</p>
+            <p className="text-gray-700 mt-2">
+              TikTok launches a new "Duet" feature (allowing users to create side-by-side videos
+              with others' content) to all users simultaneously with no randomization. You want
+              to estimate the feature's causal effect on overall user engagement (time spent per
+              day).
+            </p>
+            <ol type="a" className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
+              <li>
+                Propose an Interrupted Time Series design. What data would you need? How would
+                you construct the counterfactual? What model would you use?
+              </li>
+              <li>
+                What confounders might threaten your causal estimate? List at least three specific
+                threats.
+              </li>
+              <li>
+                How could switching the feature on and off help strengthen your causal claim?
+                What are the practical limitations of this approach?
+              </li>
+            </ol>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Problem 4: Premium Subscription Selection Bias (PSM)</p>
+            <p className="text-gray-700 mt-2">
+              A streaming company finds that premium subscribers have <code>3x</code> the engagement (hours
+              watched per week) of free-tier users. The product team claims that "upgrading to
+              premium causes higher engagement" and wants to push all users to upgrade.
+            </p>
+            <ol type="a" className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
+              <li>
+                Explain the selection bias in this comparison. Why does the <code>3x</code> difference likely
+                overstate the causal effect of premium on engagement?
+              </li>
+              <li>
+                If you were to build a propensity score model to match premium and free users,
+                what variables would you include? List at least five specific covariates and
+                explain why each matters.
+              </li>
+              <li>
+                Even with perfect matching on all observable characteristics, why might the
+                PSM estimate still be biased? Give a concrete example of an unobserved confounder.
+              </li>
+            </ol>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="font-semibold text-gray-800">Problem 5: Combining PSM and DiD (Seeking Alpha Style)</p>
+            <p className="text-gray-700 mt-2">
+              Seeking Alpha launches a monetary incentive program for content contributors
+              ($<code>10</code> per <code>1,000</code> views). You observe that writers who enrolled in the incentive
+              program began posting more frequently after enrollment. You want to estimate the
+              causal effect of monetary incentives on content production.
+            </p>
+            <p className="text-gray-700 mt-2">
+              Design a study combining Propensity Score Matching and Difference-in-Differences.
+              Specify:
+            </p>
+            <ul className="list-disc pl-5 mt-2 text-gray-700 space-y-1">
+              <li>Treatment group and control group</li>
+              <li>At least four variables you would use for propensity score matching</li>
+              <li>Pre-treatment and post-treatment periods</li>
+              <li>The key identifying assumption of the combined approach</li>
+              <li>One threat to this assumption and how you would assess it</li>
             </ul>
-          </li>
-        </ol>
-
-        <h3>Problem 2: Seller Badge Effect (RDD)</h3>
-        <p>
-          Taobao gives sellers a "Star Seller" badge when their customer satisfaction score
-          exceeds <code>4.8</code>/<code>5.0</code>. You want to estimate the causal effect of receiving the
-          badge on monthly sales revenue.
-        </p>
-        <ol type="a">
-          <li>
-            Design a Regression Discontinuity study. Define: the running variable, the
-            treatment, the control group, and the bandwidth (window) around the cutoff.
-          </li>
-          <li>
-            What is the key assumption that must hold for this design to produce valid
-            causal estimates?
-          </li>
-          <li>
-            Describe a specific scenario that would invalidate this design. How would you
-            test for it?
-          </li>
-        </ol>
-
-        <h3>Problem 3: TikTok Feature Launch (ITS)</h3>
-        <p>
-          TikTok launches a new "Duet" feature (allowing users to create side-by-side videos
-          with others' content) to all users simultaneously with no randomization. You want
-          to estimate the feature's causal effect on overall user engagement (time spent per
-          day).
-        </p>
-        <ol type="a">
-          <li>
-            Propose an Interrupted Time Series design. What data would you need? How would
-            you construct the counterfactual? What model would you use?
-          </li>
-          <li>
-            What confounders might threaten your causal estimate? List at least three specific
-            threats.
-          </li>
-          <li>
-            How could switching the feature on and off help strengthen your causal claim?
-            What are the practical limitations of this approach?
-          </li>
-        </ol>
-
-        <h3>Problem 4: Premium Subscription Selection Bias (PSM)</h3>
-        <p>
-          A streaming company finds that premium subscribers have <code>3x</code> the engagement (hours
-          watched per week) of free-tier users. The product team claims that "upgrading to
-          premium causes higher engagement" and wants to push all users to upgrade.
-        </p>
-        <ol type="a">
-          <li>
-            Explain the selection bias in this comparison. Why does the <code>3x</code> difference likely
-            overstate the causal effect of premium on engagement?
-          </li>
-          <li>
-            If you were to build a propensity score model to match premium and free users,
-            what variables would you include? List at least five specific covariates and
-            explain why each matters.
-          </li>
-          <li>
-            Even with perfect matching on all observable characteristics, why might the
-            PSM estimate still be biased? Give a concrete example of an unobserved confounder.
-          </li>
-        </ol>
-
-        <h3>Problem 5: Combining PSM and DiD (Seeking Alpha Style)</h3>
-        <p>
-          Seeking Alpha launches a monetary incentive program for content contributors
-          ($<code>10</code> per <code>1,000</code> views). You observe that writers who enrolled in the incentive
-          program began posting more frequently after enrollment. You want to estimate the
-          causal effect of monetary incentives on content production.
-        </p>
-        <p>
-          Design a study combining Propensity Score Matching and Difference-in-Differences.
-          Specify:
-        </p>
-        <ul>
-          <li>Treatment group and control group</li>
-          <li>At least four variables you would use for propensity score matching</li>
-          <li>Pre-treatment and post-treatment periods</li>
-          <li>The key identifying assumption of the combined approach</li>
-          <li>One threat to this assumption and how you would assess it</li>
-        </ul>
+          </div>
+        </div>
       </section>
 
     </ChapterLayout>
