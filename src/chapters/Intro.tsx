@@ -215,6 +215,28 @@ export default function Intro() {
           Shan Huang and the HKU Business School teaching team.
         </p>
       </section>
+
+      <section className="bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-600 rounded-lg p-4">
+        <h2 id="disclaimer" className="text-lg font-semibold mb-3">⚠️ Disclaimer</h2>
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+          This interactive textbook builds upon course materials originally developed by Professor Shan Huang
+          and PhD student Chen Wang at HKU Business School. The interactive format and extensions were created
+          by Vikesh Koul with the assistance of Claude AI.
+        </p>
+        <p className="text-sm text-gray-700 dark:text-gray-300">
+          This is the first edition. Errors may exist — if you find a wrong answer, unclear explanation,
+          or misleading figure, please report it on the{' '}
+          <a
+            href="https://github.com/vkoul/Digital-Experimentation-Methods-A-B-Testing/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
+          >
+            GitHub issues page
+          </a>
+          {' '}so it can be corrected.
+        </p>
+      </section>
     </ChapterLayout>
   )
 }
